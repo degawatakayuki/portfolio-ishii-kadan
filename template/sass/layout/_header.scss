@@ -1,0 +1,63 @@
+@use "../foundation/variables" as var;
+
+.headerBlock {
+    display: flex;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    
+    .headerLeft {
+        display: flex;
+        flex: 1;
+        margin-left: 5%;
+        align-items: center;
+
+        .headerLogo {
+            margin-right: 5%;
+        }
+
+        .headerMenu-pc {
+            
+
+            ul {
+                display: flex;
+                
+
+                li {
+                
+                    a{
+                        padding: 0.8rem 1.25rem;
+                        color: var.$white;
+                    }
+                }
+            } 
+        }
+    }
+
+    .headerRight {
+        margin-right: 5%;
+
+        button {
+            color: var.$white;
+            background:  var.$accent-color;
+            padding: 1rem 2.3125rem;
+            box-sizing: border-box;
+            border: none;
+
+            &::before {
+                display: inline-block;
+                content: '';
+                width: 20px;
+                height: 20px;
+                background-size: contain;
+                vertical-align: baseline;
+                transform: translateY(20%);
+                margin-right: 5px;
+                background-image: url('../../img/calender.png');
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>石井花壇 | 温海温泉旅館【公式サイト】</title><!-- ***************HPタイトル******************* -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://kit.fontawesome.com/bc4df06650.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- 日本語化する場合は下記を追記 -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+    <meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。 伝統的「和」の息づく空間で、至極のひとときをお過ごしください。"><!-- ***************HP説明******************* -->
+    <meta name="keywords" content=""><!-- ***************検索キーワード******************* -->
+    <meta name="robots" content="noindex"/><!-- ***************完成したら削除******************* -->
+</head>
+<body>
+    <header>
+      <div class="headerBlock">
+          <div class="headerLeft">
+              <div class="headerLogo"><img src="img/top-header-logo.png" alt="ヘッダーロゴ"></div><!-- /.headerLogo -->
+              <nav class="headerMenu-pc">
+                  <ul>
+                      <li><a href="">お部屋</a></li>
+                      <li><a href="">お料理</a></li>
+                      <li><a href="">温泉</a></li>
+                  </ul>  
+              </nav><!-- /.headerMenu -->
+          </div><!-- /.headerLeft -->
+          <div class="headerRight">
+            <button data-micromodal-trigger="modal-1" class="modal-open">宿泊予約</button>
+          </div><!-- /.headerRight -->
+      </div><!-- /.headerBlock -->
+    </header>
+    <main>
+      <section class="p-mainVisual">
+        <h1 class="mainTitle">頑張る人の<br>頑張らない時間</h1>
+        <div class="c-slideBox">
+            <img class="slideItem" src="img/mainbg01.png" srcset="img/mainbg01@2x.png 2x" alt="メイン画像01">
+            <img class="slideItem" src="img/mainbg02.png" srcset="img/mainbg02@2x.png 2x" alt="メイン画像02">
+            <img class="slideItem" src="img/mainbg03.png" srcset="img/mainbg03@2x.png 2x" alt="メイン画像03">
+        </div><!-- c-slideBox -->
+        <!-- モーダル -->
+        <div class="modal micromodal-slide c-modal" id="modal-1" aria-hidden="true">
+          <!-- 背景のオーバーレイ -->
+          <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+              <header class="modal-header">
+                <h2 class="modal-title" id="modal-1-title">宿泊予約</h2>
+                <!-- 閉じるボタン -->
+                <button class="modal-close" aria-label="Close modal" data-micromodal-close></button>
+              </header>
+              <!-- モーダルのコンテンツ -->
+              <div class="modal-content" id="modal-1-content">
+                <form class="reserve-form" action="">
+                  <label for="name">お名前</label>
+                  <input type="text" name="name" placeholder="例：石井正梧">
+                  <label for="mail">メールアドレス</label>
+                  <input type="text" name="mail" placeholder="例：Example@example.com">
+                  <label for="plan">ご希望プラン（空いているプランのみ表示されます）</label>
+                  <select name="plan" id="plan">
+                    <option value=""> プランを選択してください。</option>
+                    <option value="plan1">①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+                    <option value="plan2">②平日に優雅に楽しむ、特別宿泊プラン</option>
+                    <option value="plan3">③絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+                  </select><!-- /# -->
+                  <label for="datepicker">日時選択</label>
+                  <input type="text" name="datepicker" id="js-datepicker" placeholder="日時を選択してください">
+                  <input type="submit" value="送信する" class="submitBtn">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- /.p-mainVisual -->
+      
+        
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/micromodal.js"></script>
+    <script src="js/datepicker.js"></script>
+</body>
+</html>

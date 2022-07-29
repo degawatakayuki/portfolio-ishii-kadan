@@ -1,0 +1,31 @@
+body {
+    font-family: 
+        "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "MS P明朝", "MS PMincho", serif;
+    * {
+        box-sizing: border-box;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+.inner {
+    max-width: 1280px;
+    margin: 0 auto;
+}

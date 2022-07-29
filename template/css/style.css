@@ -1,0 +1,299 @@
+@charset "UTF-8";
+/* ブレークポイント */
+/* A Modern CSS Reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+/* ul[class],
+ol[class] {
+  padding: 0;
+} */
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+/* @media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+} */
+body {
+  font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "MS P明朝", "MS PMincho", serif;
+}
+body * {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.headerBlock {
+  display: flex;
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.headerBlock .headerLeft {
+  display: flex;
+  flex: 1;
+  margin-left: 5%;
+  align-items: center;
+}
+.headerBlock .headerLeft .headerLogo {
+  margin-right: 5%;
+}
+.headerBlock .headerLeft .headerMenu-pc ul {
+  display: flex;
+}
+.headerBlock .headerLeft .headerMenu-pc ul li a {
+  padding: 0.8rem 1.25rem;
+  color: #fff;
+}
+.headerBlock .headerRight {
+  margin-right: 5%;
+}
+.headerBlock .headerRight button {
+  color: #fff;
+  background: #978F10;
+  padding: 1rem 2.3125rem;
+  box-sizing: border-box;
+  border: none;
+}
+.headerBlock .headerRight button::before {
+  display: inline-block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  vertical-align: baseline;
+  transform: translateY(20%);
+  margin-right: 5px;
+  background-image: url("../../img/calender.png");
+}
+
+.c-slideBox {
+  height: 1079px;
+  overflow: hidden;
+  position: relative;
+}
+.c-slideBox .slideItem {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: anime ease-out 30s 0s infinite;
+  /* ふわっとアニメーション */
+}
+.c-slideBox .slideItem:nth-of-type(2) {
+  animation-delay: 10s;
+}
+.c-slideBox .slideItem:nth-of-type(3) {
+  animation-delay: 20s;
+}
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  45% {
+    opacity: 0;
+    z-index: 9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.c-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.c-modal .modal-overlay {
+  display: flex;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.4);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  justify-content: center;
+}
+.c-modal .modal-overlay .modal-container {
+  display: block;
+  position: absolute;
+  background: #fff;
+  width: 450px;
+  /* height: 500px; */
+  top: 15%;
+  margin: 0 auto;
+  text-align: center;
+}
+.c-modal .modal-overlay .modal-container .modal-title {
+  font: normal normal medium 20px/27px "YuMincho";
+  border-bottom: 1px solid #E7E7E7;
+  margin: 25px 30px 0;
+  padding-bottom: 25px;
+}
+.c-modal .modal-overlay .modal-container .modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: none;
+}
+.c-modal .modal-overlay .modal-container .modal-close::after {
+  content: "\f00d";
+  font: var(--fa-font-solid);
+  position: absolute;
+  font-size: 1.5rem;
+  top: 10px;
+  right: 10px;
+}
+.c-modal .modal-overlay .modal-container .modal-content .reserve-form {
+  text-align: left;
+  padding: 25px;
+}
+.c-modal .modal-overlay .modal-container .modal-content .reserve-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+.c-modal .modal-overlay .modal-container .modal-content .reserve-form input {
+  width: 100%;
+  border: 1px solid #E7E7E7;
+  margin-bottom: 15px;
+}
+.c-modal .modal-overlay .modal-container .modal-content .reserve-form select {
+  width: 300px;
+  margin-bottom: 15px;
+}
+.c-modal .modal-overlay .modal-container .modal-content .reserve-form #plan {
+  font: normal normal medium 14px/19px "YuMincho";
+}
+.c-modal .modal-overlay .modal-container .modal-content .reserve-form .submitBtn {
+  display: block;
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 64px auto 90px;
+}
+
+.p-mainVisual {
+  position: relative;
+}
+.p-mainVisual .mainTitle {
+  position: absolute;
+  writing-mode: vertical-rl;
+  color: #fff;
+  z-index: 100;
+  font: normal normal 34px/42px "YuMincho";
+  top: 30%;
+  right: 25%;
+  line-height: 2;
+  letter-spacing: 1.25rem;
+}
+
+/* .p-mainCatch {
+
+} */
+/* @use "object/utility/spacing"; *//*# sourceMappingURL=style.css.map */

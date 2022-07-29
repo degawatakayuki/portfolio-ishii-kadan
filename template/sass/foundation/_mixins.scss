@@ -1,0 +1,18 @@
+// mixin ブレークポイント
+@mixin breakpoint( $point ) {
+	@if $point == tablet {
+		@media ( min-width: $md-breakpoint ) {
+			@content ;
+		}
+	}
+	@if $point == pc {
+		@media ( min-width: $pc-breakpoint ) {
+			@content ;
+		}
+	}
+	@if $point == wide {
+		@media ( min-width: $wd-breakpoint ) {
+			@content ;
+		}
+	}
+}
