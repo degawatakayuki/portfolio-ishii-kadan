@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>石井花壇 | 温海温泉旅館【公式サイト】</title><!-- ***************HPタイトル******************* -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/sample.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://kit.fontawesome.com/bc4df06650.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
@@ -43,10 +44,10 @@
             <img class="slideItem" src="img/mainbg02.png" srcset="img/mainbg02@2x.png 2x" alt="メイン画像02">
             <img class="slideItem" src="img/mainbg03.png" srcset="img/mainbg03@2x.png 2x" alt="メイン画像03">
         </div><!-- c-slideBox -->
-        <!-- モーダル -->
-        <div class="modal micromodal-slide c-modal" id="modal-1" aria-hidden="true">
-          <!-- 背景のオーバーレイ -->
-          <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+          <!-- モーダル -->
+          <div class="modal micromodal-slide c-modal" id="modal-1" aria-hidden="true">
+            <!-- 背景のオーバーレイ -->
+            <div class="modal-overlay" tabindex="-1" data-micromodal-close>
             <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
               <header class="modal-header">
                 <h2 class="modal-title" id="modal-1-title">宿泊予約</h2>
@@ -69,15 +70,22 @@
                   </select><!-- /# -->
                   <label for="datepicker">日時選択</label>
                   <input type="text" name="datepicker" id="js-datepicker" placeholder="日時を選択してください">
-                  <input type="submit" value="送信する" class="submitBtn">
-                </form>
+                    <input type="submit" value="送信する" class="submitBtn">
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
+          </div>      
       </section><!-- /.p-mainVisual -->
-      
-        
+      <section class="p-mainCatch">
+          <div class="inner mainCatchContainer">
+            <h2 class="catchTitle">温海温泉の<span class="brIndent">美しさに癒やされて</span></h2><!-- /.catchTitle -->
+            <p>東北の奥座敷である温海温泉郷<br>開湯は約1300年前とされ、役小角が<br>発見したと伝えられます</p>
+            <p>石井花壇は江戸より続く由緒ある旅館で<br>クラシックな作りの中に大正ロマンあふれる<br>内装を残しております</p>
+            <p>圧倒的癒やしの空間で<br>頑張る現代人に<br>頑張らない圧倒的な非日常をご提供します</p>
+            <p class="ryokanName">石井花壇</p><!-- /.ryokanName -->
+          </div><!-- /.mainCatchContainer -->
+      </section><!-- /.mainCatch -->
     </main>
     <footer>
 

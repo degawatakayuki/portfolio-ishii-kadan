@@ -1,3 +1,41 @@
-/* .p-mainCatch {
+.p-mainCatch {
+    background-image: url(../../../img/bg.png);
+    width: 100%;
+    height: 681px;
+    writing-mode: vertical-rl;
+    display: flex;
     
-} */
+    .mainCatchContainer {
+        display: block;
+        width: 600px;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        .catchTitle {
+            font-size: 1.75rem;
+            line-height: 1.5;
+            font-family: 'YuMincho';
+            letter-spacing: 0.5rem;
+
+            .brIndent {
+                display: block;
+                text-indent: 3rem;
+            }
+        }
+
+        p {
+            margin-top: 50px;
+            letter-spacing: 0.25rem;
+            font-family: 'YuMincho';
+        }
+
+        .ryokanName {
+            align-self: flex-end;
+            font-size: 1.375rem;
+            letter-spacing: 0.5rem;
+        }
+    }
+} 

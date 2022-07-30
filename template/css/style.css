@@ -253,6 +253,7 @@ h1, h2, h3, h4, h5, h6 {
 .c-modal .modal-overlay .modal-container .modal-content .reserve-form {
   text-align: left;
   padding: 25px;
+  padding-bottom: 0;
 }
 .c-modal .modal-overlay .modal-container .modal-content .reserve-form label {
   display: block;
@@ -270,12 +271,77 @@ h1, h2, h3, h4, h5, h6 {
 .c-modal .modal-overlay .modal-container .modal-content .reserve-form #plan {
   font: normal normal medium 14px/19px "YuMincho";
 }
+.c-modal .modal-overlay .modal-container .modal-content .reserve-form #js-datepicker {
+  margin-bottom: 0;
+}
 .c-modal .modal-overlay .modal-container .modal-content .reserve-form .submitBtn {
   display: block;
   width: 50%;
   padding-top: 10px;
   padding-bottom: 10px;
   margin: 64px auto 90px;
+}
+
+/* モーダルアニメーション */
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes mmslideIn {
+  from {
+    transform: translateY(15%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes mmslideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10%);
+  }
+}
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden=false] .modal-overlay {
+  animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden=false] .modal-container {
+  animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden=true] .modal-overlay {
+  animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden=true] .modal-container {
+  animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide .modal-container,
+.micromodal-slide .modal-overlay {
+  will-change: transform;
 }
 
 .p-mainVisual {
@@ -293,7 +359,41 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1.25rem;
 }
 
-/* .p-mainCatch {
+.p-mainCatch {
+  background-image: url(../../../img/bg.png);
+  width: 100%;
+  height: 681px;
+  writing-mode: vertical-rl;
+  display: flex;
+}
+.p-mainCatch .mainCatchContainer {
+  display: block;
+  width: 600px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.p-mainCatch .mainCatchContainer .catchTitle {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  font-family: "YuMincho";
+  letter-spacing: 0.5rem;
+}
+.p-mainCatch .mainCatchContainer .catchTitle .brIndent {
+  display: block;
+  text-indent: 3rem;
+}
+.p-mainCatch .mainCatchContainer p {
+  margin-top: 50px;
+  letter-spacing: 0.25rem;
+  font-family: "YuMincho";
+}
+.p-mainCatch .mainCatchContainer .ryokanName {
+  align-self: flex-end;
+  font-size: 1.375rem;
+  letter-spacing: 0.5rem;
+}
 
-} */
 /* @use "object/utility/spacing"; *//*# sourceMappingURL=style.css.map */
