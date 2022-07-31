@@ -18,4 +18,5 @@ document.addEventListener('DOMContentLoaded',
             const index = arrayTabs.indexOf(this);
             document.getElementsByClassName('panel')[index].classList.add('is-show');          
         };
-    }, false);
+    }, false
+);
