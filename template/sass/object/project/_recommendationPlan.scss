@@ -1,0 +1,33 @@
+.p-recommendationPlan {
+    background-image: url(../../../img/bg02.png);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    width: 100%;
+    padding: 40px 0 140px;
+
+    .planContens {
+        display: flex;
+        justify-content: space-between;
+
+        .planMenu {
+            width: 30%;
+            text-align: left;
+ 
+            img {
+                width: 100%;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+                line-height: 1.25;
+                margin-top: 28px;
+                margin-bottom: 30px;
+            }
+
+            p {
+                width: 80%;
+                line-height: 2;
+            }
+        }
+    }
+}

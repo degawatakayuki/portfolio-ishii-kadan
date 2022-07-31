@@ -1,0 +1,41 @@
+.c-tabPanel {
+    width: 100%;
+    margin: 0 auto;
+
+    .tab-group {
+        display: flex;
+        justify-content: center;
+
+        .tab {
+            cursor: pointer;
+        }
+
+        li {
+            padding: 10px 20px;
+        }
+
+        .is-active {
+            text-decoration: underline;
+            transition: all 0.2s ease-out;
+        }
+    }
+
+    .panel-group {
+        margin-top: 50px;
+        
+
+        .panel {
+            display: none;
+
+            >.c-card-info:nth-of-type(5),.c-card-info:nth-of-type(5) {
+                margin-bottom: 0;
+            }
+
+            &.is-show {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

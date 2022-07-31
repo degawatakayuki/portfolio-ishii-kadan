@@ -32,6 +32,19 @@
     }
 }
 
+.c-card-info {
+    display: flex;
+    background: #F6F6F6;
+    width: 46%;
+    height: 120px;
+    margin-bottom: 20px;
+
+    .infoContent {
+        padding: 12px 30px;
+    }
+
+}
+
 .reverse {
     flex-direction: row-reverse;
 

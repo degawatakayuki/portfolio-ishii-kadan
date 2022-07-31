@@ -373,6 +373,17 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 2;
 }
 
+.c-card-info {
+  display: flex;
+  background: #F6F6F6;
+  width: 46%;
+  height: 120px;
+  margin-bottom: 20px;
+}
+.c-card-info .infoContent {
+  padding: 12px 30px;
+}
+
 .reverse {
   flex-direction: row-reverse;
 }
@@ -389,6 +400,49 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem 2.5rem;
   border: 1px solid #707070;
   color: #000000;
+}
+
+.c-sectionTitle {
+  font: normal normal medium 36px/32px "YuMincho";
+  text-align: center;
+  margin-bottom: 60px;
+}
+.c-sectionTitle img {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.c-tabPanel {
+  width: 100%;
+  margin: 0 auto;
+}
+.c-tabPanel .tab-group {
+  display: flex;
+  justify-content: center;
+}
+.c-tabPanel .tab-group .tab {
+  cursor: pointer;
+}
+.c-tabPanel .tab-group li {
+  padding: 10px 20px;
+}
+.c-tabPanel .tab-group .is-active {
+  text-decoration: underline;
+  transition: all 0.2s ease-out;
+}
+.c-tabPanel .panel-group {
+  margin-top: 50px;
+}
+.c-tabPanel .panel-group .panel {
+  display: none;
+}
+.c-tabPanel .panel-group .panel > .c-card-info:nth-of-type(5), .c-tabPanel .panel-group .panel .c-card-info:nth-of-type(5) {
+  margin-bottom: 0;
+}
+.c-tabPanel .panel-group .panel.is-show {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .p-mainVisual {
@@ -448,6 +502,40 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   margin-top: 106px;
   margin-bottom: 78px;
+}
+
+.p-recommendationPlan {
+  background-image: url(../../../img/bg02.png);
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  width: 100%;
+  padding: 40px 0 140px;
+}
+.p-recommendationPlan .planContens {
+  display: flex;
+  justify-content: space-between;
+}
+.p-recommendationPlan .planContens .planMenu {
+  width: 30%;
+  text-align: left;
+}
+.p-recommendationPlan .planContens .planMenu img {
+  width: 100%;
+}
+.p-recommendationPlan .planContens .planMenu h3 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin-top: 28px;
+  margin-bottom: 30px;
+}
+.p-recommendationPlan .planContens .planMenu p {
+  width: 80%;
+  line-height: 2;
+}
+
+.p-info {
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 /* @use "object/utility/spacing"; *//*# sourceMappingURL=style.css.map */

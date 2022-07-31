@@ -12,10 +12,13 @@
 @use "object/component/modal";
 @use "object/component/card";
 @use "object/component/button";
+@use "object/component/text";
+@use "object/component/tabPanel";
 
 @use "object/project/mainVisual";
 @use "object/project/mainCatch";
 @use "object/project/mainContents";
+@use "object/project/recommendationPlan";
+@use "object/project/info";
 
 /* @use "object/utility/spacing"; */
-
