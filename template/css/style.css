@@ -161,6 +161,48 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("../../img/calender.png");
 }
 
+.footerInfo {
+  padding: 60px 0;
+  background-image: url(../../img/bg-3.png);
+  background-size: cover;
+}
+.footerInfo .footerNav {
+  writing-mode: vertical-lr;
+}
+.footerInfo .footerNav a {
+  color: #000;
+  line-height: 2;
+  letter-spacing: 1rem;
+  font-size: 1.125rem;
+}
+.footerInfo .footerLogo {
+  display: block;
+  width: 145px;
+  height: 96px;
+  margin: 90px auto 65px;
+}
+.footerInfo .shopInfo {
+  margin: 0 auto;
+  text-align: center;
+}
+.footerInfo .shopInfo .shopAddress {
+  margin-bottom: 15px;
+}
+.footerInfo .shopInfo p {
+  display: inline-block;
+}
+.footerInfo .shopInfo p:first-of-type {
+  margin-right: 15px;
+}
+
+.copyRight {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 21px 0 23px;
+  font-size: 0.75rem;
+}
+
 .c-slideBox {
   height: 1079px;
   overflow: hidden;
@@ -506,7 +548,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .p-recommendationPlan {
   background-image: url(../../../img/bg02.png);
-  /* background-repeat: no-repeat; */
   background-size: cover;
   width: 100%;
   padding: 40px 0 140px;
@@ -540,6 +581,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .p-access {
   background-image: url(../../../img/bg-1.png);
+  background-size: cover;
   padding: 50px 0 110px;
 }
 .p-access .addressBlock {
