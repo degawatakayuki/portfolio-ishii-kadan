@@ -25,15 +25,15 @@
     <header>
       <div class="headerBlock" id="headerBlock">
           <div class="headerLeft">
-              <div class="headerLogo">
+              <a href="index.html" class="headerLogo">
                 <img class="logo" src="img/top-header-logo.png" alt="ヘッダーロゴ">
                 <img class="logoScroll" src="img/sub-header-logo.png" alt="ヘッダーロゴ">
-              </div><!-- /.headerLogo -->
+              </a><!-- /.headerLogo -->
               <nav class="headerMenu-pc">
                   <ul>
-                      <li><a href="">お部屋</a></li>
-                      <li><a href="">お料理</a></li>
-                      <li><a href="">温泉</a></li>
+                      <li><a href="room.html">お部屋</a></li>
+                      <li><a href="cooking.html">お料理</a></li>
+                      <li><a href="onsen.html">温泉</a></li>
                   </ul>  
               </nav><!-- /.headerMenu -->
           </div><!-- /.headerLeft -->
@@ -101,7 +101,7 @@
             <div class="cardContents">
               <h3 class="cardTitle">喧騒から離れた空間<br>心落ち着く至極のひととき</h3><!-- /.cardTitle -->
               <p>まるで時が止まったかのような、圧倒的な静寂のなかで、<br>ひたすらにゆったりと…。<br>最高級の「何もしない時間」をお過ごしください。</p>
-              <div class="c-linkBtn"><a href="">お部屋について</a></div>
+              <div class="c-linkBtn"><a href="room.html">お部屋について</a></div>
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@
             <div class="cardContents">
               <h3 class="cardTitle">出迎えるのは<br>極上の温海料理</h3><!-- /.cardTitle -->
               <p>最も旬の食材を愉しむ、最高の贅沢を最高級A5ランクの米沢牛と共に頂く。<br>あなたの人生史に残る「極上の感動」をお約束します。</p>
-              <div class="c-linkBtn"><a href="">料理について</a></div>
+              <div class="c-linkBtn"><a href="cooking.html">料理について</a></div>
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@
             <div class="cardContents">
               <h3 class="cardTitle">疲れ切った身体にやすらぎを<br>温海の源泉に癒やされて</h3><!-- /.cardTitle -->
               <p>古くは弘法大師の病をも治療したと言われる熱海の泉質。<br>現代人の疲弊しきった身体を修復する最高級の湯治場としてご活用ください。</p>
-              <div class="c-linkBtn"><a href="">温泉について</a></div>
+              <div class="c-linkBtn"><a href="onsen.html">温泉について</a></div>
             </div><!-- /.cardContents -->
           </div><!-- /.c-card -->
         </div>
@@ -293,9 +293,9 @@
       <div class="footerInfo">
         <nav class="inner footerNav">
           <ul>
-            <li><a href="">温泉</a></li>
-            <li><a href="">お料理</a></li>
-            <li><a href="">お料理</a></li>
+            <li><a href="onsen.html">温泉</a></li>
+            <li><a href="cooking.html">お料理</a></li>
+            <li><a href="room.html">お部屋</a></li>
           </ul>
         </nav><!-- /.footerNav -->
         <div class="footerLogo">
@@ -322,5 +322,25 @@
     <script src="js/headerScroll.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "HOME",
+            "item": "https://technical-seo.jp/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "SEO",
+            "item": "https://technical-seo.jp/category/seo/"
+          },
+        ]
+      }
+      </script>
 </body>
 </html>

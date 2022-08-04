@@ -467,6 +467,61 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 5%;
 }
 
+.c-card-room {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-bottom: 140px;
+}
+.c-card-room .roomImg {
+  width: 45%;
+  max-width: 525px;
+  position: absolute;
+  top: -60px;
+  overflow: hidden;
+}
+.c-card-room .roomImg img {
+  transition: 1s all;
+}
+.c-card-room .roomContent {
+  background-image: url("../../../img/bg-2.png");
+  background-size: cover;
+  width: 80%;
+  padding: 55px;
+  padding-left: 20%;
+  margin-left: 30%;
+}
+.c-card-room .roomContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 46px;
+}
+.c-card-room .roomContent p {
+  line-height: 2;
+  margin-bottom: 47px;
+}
+.c-card-room .roomContent .comment {
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+.c-card-room:hover .roomImg {
+  overflow: hidden;
+  transition: 1s all;
+}
+.c-card-room:hover .roomImg img {
+  transform: scale(1.1);
+  transition: 1s all;
+}
+
+.reverse-room {
+  flex-direction: row-reverse;
+}
+.reverse-room .roomContent {
+  margin-left: unset;
+  margin-right: 30%;
+  padding-left: 5%;
+  padding-right: 20%;
+}
+
 .c-linkBtn {
   display: inline-block;
   margin-top: 40px;
@@ -528,6 +583,27 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
+.c-breadCrumbList {
+  margin: 30px 0 90px;
+}
+.c-breadCrumbList ul {
+  display: flex;
+}
+.c-breadCrumbList ul li a {
+  color: #000;
+}
+.c-breadCrumbList ul li a:hover {
+  text-decoration: underline;
+}
+.c-breadCrumbList ul li::after {
+  content: ">";
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.c-breadCrumbList ul li:last-of-type::after {
+  content: "";
+}
+
 .p-mainVisual {
   position: relative;
 }
@@ -541,6 +617,26 @@ h1, h2, h3, h4, h5, h6 {
   right: 25%;
   line-height: 2;
   letter-spacing: 1.25rem;
+}
+
+.mainVisual-room {
+  text-align: center;
+}
+.mainVisual-room .mainTitle-room {
+  position: absolute;
+  display: inline-block;
+  color: #fff;
+  top: 50%;
+  transform: translateX(-50%);
+  font: normal normal 34px/42px "YuMincho";
+}
+.mainVisual-room .mainVisual-room {
+  height: 500px;
+}
+.mainVisual-room .mainVisual-room img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .p-mainCatch {
@@ -586,6 +682,19 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   margin-top: 106px;
   margin-bottom: 78px;
+}
+
+.mainContents-room {
+  width: 100%;
+  margin-top: 90px;
+}
+.mainContents-room .mainContent-roomContainer {
+  width: 100%;
+}
+.mainContents-room .mainContent-roomContainer h2 {
+  height: 2;
+  text-align: center;
+  margin-bottom: 130px;
 }
 
 .p-recommendationPlan {
@@ -672,6 +781,40 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
   object-position: bottom;
   transition: all ease 0.2s;
+}
+
+.p-onsenExplanation {
+  margin-bottom: 80px;
+}
+.p-onsenExplanation .explanationContainer {
+  padding: 80px 0;
+  border-top: 1px solid #E7E7E7;
+  border-bottom: 1px solid #E7E7E7;
+}
+.p-onsenExplanation .explanationContainer h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.p-onsenExplanation .explanationContainer .explanationContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+.p-onsenExplanation .explanationContainer .explanationContent dl {
+  width: 100%;
+  display: flex;
+  border-top: 1px solid #E7E7E7;
+  padding: 15px 0;
+  font-size: 0.9375em;
+  line-height: 2;
+}
+.p-onsenExplanation .explanationContainer .explanationContent dl dt {
+  width: 20%;
+}
+.p-onsenExplanation .explanationContainer .explanationContent dl dd {
+  flex: 1;
+}
+.p-onsenExplanation .explanationContainer .explanationContent dl:last-of-type {
+  border-bottom: 1px solid #E7E7E7;
 }
 
 /* @use "object/utility/spacing"; *//*# sourceMappingURL=style.css.map */

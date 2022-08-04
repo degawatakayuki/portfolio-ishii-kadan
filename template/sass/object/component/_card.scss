@@ -40,8 +40,7 @@
                 transform: scale(1.1);
                 transition:  1s all;
             }
-        }
-        
+        }       
     }
 }
 
@@ -55,15 +54,81 @@
     .infoContent {
         padding: 12px 30px;
     }
-
 }
 
 .reverse {
     flex-direction: row-reverse;
-
 
     .cardContents {
         margin-left: auto;
         margin-right: 5%;
     }
 }
+
+.c-card-room {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-bottom: 140px;
+
+    .roomImg {
+        width: 45%;
+        max-width: 525px;
+        position: absolute;
+        top: -60px;
+        overflow: hidden;
+
+        img {
+            transition:  1s all;
+        }  
+    }
+
+    .roomContent {
+        background-image: url('../../../img/bg-2.png');
+        background-size: cover;
+        width: 80%;
+        padding: 55px;
+        padding-left: 20%;
+        margin-left: 30%;
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 46px;
+        }
+
+        p {
+            line-height: 2;
+            margin-bottom: 47px;
+        }
+
+        .comment {
+            line-height: 1.5;
+            font-size: 0.875rem;
+        }
+    }
+
+    &:hover {
+
+        .roomImg {
+            overflow: hidden;
+            transition: 1s all;
+
+            img {
+                transform: scale(1.1);
+                transition: 1s all;
+            }
+        }
+    }
+}
+
+.reverse-room {
+    flex-direction: row-reverse;
+
+    .roomContent {
+        margin-left: unset;
+        margin-right: 30%;
+        padding-left: 5%;
+        padding-right: 20%;
+    }
+}
+
