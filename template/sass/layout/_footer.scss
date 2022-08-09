@@ -1,17 +1,28 @@
+@use "../foundation/variables" as var;
+@use "../foundation/mixins" as min;
+
 .footerInfo {
     padding: 60px 0;
     background-image: url(../../img/bg-3.png);
     background-size: cover;
 
     .footerNav {
-        writing-mode: vertical-lr;
+        width: 100%;
+        text-align: center;
 
-        a {
-            color: #000;
-            line-height: 2;
-            letter-spacing: 1rem;
-            font-size: 1.125rem;
+        ul {
+            writing-mode: vertical-lr;
+            display: inline-block;
+            text-align: left;
+            a {
+                color: #000;
+                line-height: 2;
+                letter-spacing: 1rem;
+                font-weight: 500;
+                font-size: 1.125rem;
+            }
         }
+        
     }
 
     .footerLogo {
@@ -19,6 +30,10 @@
         width: 145px;
         height: 96px;
         margin: 90px auto 65px;
+
+        @include min.breakpoint(sp) {
+            margin-top: 65px;
+        }
     }
 
     .shopInfo {
@@ -45,4 +60,5 @@
     text-align: center;
     padding: 21px 0 23px;
     font-size: 0.75rem;
+    font-weight: 500;
 }

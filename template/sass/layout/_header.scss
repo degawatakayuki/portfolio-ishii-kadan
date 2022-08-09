@@ -1,4 +1,5 @@
 @use "../foundation/variables" as var;
+@use "../foundation/mixins" as min;
 
 .headerBlock {
     display: flex;
@@ -18,8 +19,17 @@
         margin-left: 3%;
         align-items: center;
 
+        @include min.breakpoint(sp) {
+            margin-left: 1%;
+            max-width: 150px;
+        }
+
         .headerLogo {
             margin-right: 5%;
+
+            @include min.breakpoint(sp) {
+                margin-right: 1%;
+            }
 
             .logo {
                 display: block;
@@ -32,7 +42,6 @@
 
         .headerMenu-pc {
             
-
             ul {
                 display: flex;
                 
@@ -45,11 +54,22 @@
                     }
                 }
             } 
+
+            @include min.breakpoint(sp) {
+                display: none;
+            }
+
         }
     }
 
     .headerRight {
         margin-right: 3%;
+
+        @include min.breakpoint(sp) {
+            flex:1;
+            display: flex;
+            justify-content: flex-end;
+        }
 
         button {
             color: var.$white;
@@ -57,6 +77,12 @@
             padding: 1rem 2.3125rem;
             box-sizing: border-box;
             border: none;
+
+            @include min.breakpoint(sp) {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+                margin-right: 10px;
+            }
 
             &::before {
                 display: inline-block;
@@ -68,6 +94,114 @@
                 transform: translateY(20%);
                 margin-right: 5px;
                 background-image: url('../../img/calender.png');
+
+            }
+        }
+        
+        .headerMenuBlock-sp {
+        
+            display: none;
+
+            @include min.breakpoint(sp) {
+                display: block;
+            }
+
+            #navToggle {
+                position: absolute;
+                top: -330px;
+            }
+
+            .spMainNav {
+                display: none;
+            }
+
+            #navToggle:focus-visible ~ .hamburger {
+                box-shadow: 1px 1px 2px gray;
+            }
+            #navToggle:checked ~ .hamburger {
+                span {
+                    background: transparent;
+        
+                    &::before {
+                        top: 50%;
+                        transform: rotate(45deg);
+                    }
+                    &::after {
+                        top: 50%;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+            #navToggle:checked ~ .spMainNav {
+                display: block;
+                
+        
+                .spMainNav-list {
+                    position: absolute;
+                    background: #fff;
+                    top: 80px;
+                    left: 0;
+                    right: 0;
+                    z-index: 100;
+                    opacity: 0.8;
+                    
+                }
+                .spMainNav-item {
+                    padding: 12px 4% 6px;
+                    border-bottom: 1px solid #eee;
+                    text-align: center;
+                    
+                    a {
+                        color: #000;
+                    }
+                }
+            }
+
+            .hamburger {
+                display: none;
+                width: 60px;
+                height: 50px;
+                padding: 10px;
+                position: relative;
+
+                @include min.breakpoint(sp) {
+                    display: block;
+                }
+            
+                span {
+                    display: block;
+                    height: 2px;
+                    background: #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    transition: all ease .15s;
+            
+                    &::before {
+                        content: '';
+                        display: block;
+                        height: 2px;
+                        background: #fff;
+                        position: absolute;
+                        top: -10px;
+                        left: 0;
+                        right: 0;
+                        transition: all ease .15s;
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        height: 2px;
+                        background: #fff;
+                        position: absolute;
+                        top: 10px;
+                        left: 0;
+                        right: 0;
+                        transition: all ease .15s;
+                    }
+                }
             }
         }
     }
@@ -88,6 +222,8 @@
         }
 
         .headerMenu-pc {
+
+            
             ul {
                 li {
                     a{
@@ -97,4 +233,37 @@
             } 
         }
     }
+
+    .headerRight {
+
+        .headerMenuBlock-sp {
+
+            .hamburger {
+                display: none;
+                width: 60px;
+                height: 50px;
+                padding: 10px;
+                position: relative;
+                
+        
+                @include min.breakpoint(sp) {
+                    display: block;
+        
+                    span {
+                        background: #000;
+            
+                        &::before {
+                            background: #000;
+                        }
+                        &::after {
+                            background: #000;
+                        }
+                    }
+                }
+          
+            }
+        }
+    }
+    
+    
 }

@@ -85,6 +85,10 @@ body {
 }
 body * {
   box-sizing: border-box;
+  font-weight: 800;
+}
+body p {
+  font-weight: 500;
 }
 
 ul {
@@ -106,12 +110,65 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
+  font-weight: 800;
+  font-size: 1rem;
 }
 
 .inner {
   max-width: 1280px;
   margin: 0 auto;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 845px) {
+  .inner {
+    max-width: 90%;
+  }
+}
+
+.br-sp {
+  display: none;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .br-sp {
+    display: block;
+  }
+}
+
+.br-pc {
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .br-pc {
+    display: none;
+  }
 }
 
 .headerBlock {
@@ -131,15 +188,58 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
   margin-left: 3%;
   align-items: center;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .headerBlock .headerLeft {
+    margin-left: 1%;
+    max-width: 150px;
+  }
 }
 .headerBlock .headerLeft .headerLogo {
   margin-right: 5%;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .headerBlock .headerLeft .headerLogo {
+    margin-right: 1%;
+  }
 }
 .headerBlock .headerLeft .headerLogo .logo {
   display: block;
 }
 .headerBlock .headerLeft .headerLogo .logoScroll {
   display: none;
+}
+.headerBlock .headerLeft .headerMenu-pc {
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
 }
 .headerBlock .headerLeft .headerMenu-pc ul {
   display: flex;
@@ -148,8 +248,30 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.8rem 1.25rem;
   color: #fff;
 }
+@media (max-width: 415px) {
+  .headerBlock .headerLeft .headerMenu-pc {
+    display: none;
+  }
+}
 .headerBlock .headerRight {
   margin-right: 3%;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .headerBlock .headerRight {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 .headerBlock .headerRight button {
   color: #fff;
@@ -157,6 +279,23 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem 2.3125rem;
   box-sizing: border-box;
   border: none;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .headerBlock .headerRight button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    margin-right: 10px;
+  }
 }
 .headerBlock .headerRight button::before {
   display: inline-block;
@@ -168,6 +307,120 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(20%);
   margin-right: 5px;
   background-image: url("../../img/calender.png");
+}
+.headerBlock .headerRight .headerMenuBlock-sp {
+  display: none;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .headerBlock .headerRight .headerMenuBlock-sp {
+    display: block;
+  }
+}
+.headerBlock .headerRight .headerMenuBlock-sp #navToggle {
+  position: absolute;
+  top: -330px;
+}
+.headerBlock .headerRight .headerMenuBlock-sp .spMainNav {
+  display: none;
+}
+.headerBlock .headerRight .headerMenuBlock-sp #navToggle:focus-visible ~ .hamburger {
+  box-shadow: 1px 1px 2px gray;
+}
+.headerBlock .headerRight .headerMenuBlock-sp #navToggle:checked ~ .hamburger span {
+  background: transparent;
+}
+.headerBlock .headerRight .headerMenuBlock-sp #navToggle:checked ~ .hamburger span::before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.headerBlock .headerRight .headerMenuBlock-sp #navToggle:checked ~ .hamburger span::after {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+.headerBlock .headerRight .headerMenuBlock-sp #navToggle:checked ~ .spMainNav {
+  display: block;
+}
+.headerBlock .headerRight .headerMenuBlock-sp #navToggle:checked ~ .spMainNav .spMainNav-list {
+  position: absolute;
+  background: #fff;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  opacity: 0.8;
+}
+.headerBlock .headerRight .headerMenuBlock-sp #navToggle:checked ~ .spMainNav .spMainNav-item {
+  padding: 12px 4% 6px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+.headerBlock .headerRight .headerMenuBlock-sp #navToggle:checked ~ .spMainNav .spMainNav-item a {
+  color: #000;
+}
+.headerBlock .headerRight .headerMenuBlock-sp .hamburger {
+  display: none;
+  width: 60px;
+  height: 50px;
+  padding: 10px;
+  position: relative;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .headerBlock .headerRight .headerMenuBlock-sp .hamburger {
+    display: block;
+  }
+}
+.headerBlock .headerRight .headerMenuBlock-sp .hamburger span {
+  display: block;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: all ease 0.15s;
+}
+.headerBlock .headerRight .headerMenuBlock-sp .hamburger span::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  transition: all ease 0.15s;
+}
+.headerBlock .headerRight .headerMenuBlock-sp .hamburger span::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  transition: all ease 0.15s;
 }
 
 .headerScroll {
@@ -183,6 +436,37 @@ h1, h2, h3, h4, h5, h6 {
 .headerScroll .headerLeft .headerMenu-pc ul li a {
   color: #000;
 }
+.headerScroll .headerRight .headerMenuBlock-sp .hamburger {
+  display: none;
+  width: 60px;
+  height: 50px;
+  padding: 10px;
+  position: relative;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .headerScroll .headerRight .headerMenuBlock-sp .hamburger {
+    display: block;
+  }
+  .headerScroll .headerRight .headerMenuBlock-sp .hamburger span {
+    background: #000;
+  }
+  .headerScroll .headerRight .headerMenuBlock-sp .hamburger span::before {
+    background: #000;
+  }
+  .headerScroll .headerRight .headerMenuBlock-sp .hamburger span::after {
+    background: #000;
+  }
+}
 
 .footerInfo {
   padding: 60px 0;
@@ -190,12 +474,19 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
 }
 .footerInfo .footerNav {
-  writing-mode: vertical-lr;
+  width: 100%;
+  text-align: center;
 }
-.footerInfo .footerNav a {
+.footerInfo .footerNav ul {
+  writing-mode: vertical-lr;
+  display: inline-block;
+  text-align: left;
+}
+.footerInfo .footerNav ul a {
   color: #000;
   line-height: 2;
   letter-spacing: 1rem;
+  font-weight: 500;
   font-size: 1.125rem;
 }
 .footerInfo .footerLogo {
@@ -203,6 +494,21 @@ h1, h2, h3, h4, h5, h6 {
   width: 145px;
   height: 96px;
   margin: 90px auto 65px;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .footerInfo .footerLogo {
+    margin-top: 65px;
+  }
 }
 .footerInfo .shopInfo {
   margin: 0 auto;
@@ -224,12 +530,43 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   padding: 21px 0 23px;
   font-size: 0.75rem;
+  font-weight: 500;
 }
 
 .c-slideBox {
   height: 1079px;
   overflow: hidden;
   position: relative;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 845px) {
+  .c-slideBox {
+    height: 780px;
+  }
+}
+@media (max-width: 415px) {
+  .c-slideBox {
+    height: 540px;
+  }
 }
 .c-slideBox .slideItem {
   opacity: 0;
@@ -288,13 +625,28 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   background: #fff;
   width: 450px;
-  /* height: 500px; */
   top: 15%;
   margin: 0 auto;
   text-align: center;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .c-modal .modal-overlay .modal-container {
+    width: 100%;
+    top: 80px;
+  }
 }
 .c-modal .modal-overlay .modal-container .modal-title {
-  font: normal normal medium 20px/27px "YuMincho";
+  font: normal normal 20px/27px "YuMincho";
   border-bottom: 1px solid #E7E7E7;
   margin: 25px 30px 0;
   padding-bottom: 25px;
@@ -415,10 +767,46 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-height: 500px;
   margin-bottom: 122px;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .c-card {
+    flex-direction: column;
+    max-height: unset;
+    background-image: url(../../../img/bg-2.png);
+    margin-bottom: 0;
+    padding-bottom: 80px;
+    /* opacity: 0.9; */
+  }
 }
 .c-card .cardImg {
   max-width: 52%;
   overflow: hidden;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .c-card .cardImg {
+    max-width: 100%;
+    height: 300px;
+  }
 }
 .c-card .cardImg img {
   width: 100%;
@@ -430,15 +818,68 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 45%;
   margin-left: 5%;
   margin-right: auto;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .c-card .cardContents {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 .c-card .cardContents .cardTitle {
   font-size: 2.25rem;
   line-height: 1.72;
   margin-top: 10px;
   margin-bottom: 40px;
+  font-weight: 500;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .c-card .cardContents .cardTitle {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
 .c-card .cardContents p {
   line-height: 2;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .c-card .cardContents p {
+    font-size: 0.9375rem;
+    line-height: 1.8;
+    text-align: center;
+  }
 }
 .c-card:hover .cardImg {
   overflow: hidden;
@@ -454,17 +895,101 @@ h1, h2, h3, h4, h5, h6 {
   width: 46%;
   height: 120px;
   margin-bottom: 20px;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
 }
 .c-card-info .infoContent {
   padding: 12px 30px;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+.c-card-info .infoContent .date {
+  font: normal normal 500 14px/32px "YuMincho";
+}
+@media (max-width: 415px) {
+  .c-card-info .infoContent {
+    padding: 5px 10px;
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 415px) {
+  .c-card-info {
+    width: 100%;
+    height: unset;
+  }
+}
+.c-card-info img {
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .c-card-info img {
+    width: 100px;
+    height: auto;
+  }
 }
 
 .reverse {
   flex-direction: row-reverse;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .reverse {
+    flex-direction: column;
+  }
 }
 .reverse .cardContents {
   margin-left: auto;
   margin-right: 5%;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .reverse .cardContents {
+    margin: 0 auto;
+    max-width: 100%;
+  }
 }
 
 .c-card-room {
@@ -472,6 +997,22 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 100%;
   margin-bottom: 140px;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .c-card-room {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
 }
 .c-card-room .roomImg {
   width: 45%;
@@ -479,8 +1020,43 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: -60px;
   overflow: hidden;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 845px) {
+  .c-card-room .roomImg {
+    width: 50%;
+    height: 500px;
+  }
+}
+@media (max-width: 415px) {
+  .c-card-room .roomImg {
+    position: unset;
+    width: 100%;
+    height: auto;
+  }
 }
 .c-card-room .roomImg img {
+  width: 100%;
+  height: 250px;
   transition: 1s all;
 }
 .c-card-room .roomContent {
@@ -490,14 +1066,81 @@ h1, h2, h3, h4, h5, h6 {
   padding: 55px;
   padding-left: 20%;
   margin-left: 30%;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 845px) {
+  .c-card-room .roomContent {
+    width: 90%;
+    padding: 30px;
+    padding-left: 25%;
+  }
+}
+@media (max-width: 415px) {
+  .c-card-room .roomContent {
+    width: 100%;
+    padding: 25px;
+    margin-left: unset;
+  }
 }
 .c-card-room .roomContent h3 {
   font-size: 1.5rem;
   margin-bottom: 46px;
+  font-weight: 500;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 845px) {
+  .c-card-room .roomContent h3 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
 }
 .c-card-room .roomContent p {
   line-height: 2;
   margin-bottom: 47px;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 845px) {
+  .c-card-room .roomContent p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
 }
 .c-card-room .roomContent .comment {
   line-height: 1.5;
@@ -514,17 +1157,73 @@ h1, h2, h3, h4, h5, h6 {
 
 .reverse-room {
   flex-direction: row-reverse;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .reverse-room {
+    flex-direction: column;
+  }
 }
 .reverse-room .roomContent {
   margin-left: unset;
   margin-right: 30%;
   padding-left: 5%;
   padding-right: 20%;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
 }
-
+@media (max-width: 845px) {
+  .reverse-room .roomContent {
+    padding-right: 25%;
+  }
+}
 .c-linkBtn {
   display: inline-block;
   margin-top: 40px;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .c-linkBtn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
 .c-linkBtn a {
   padding: 1rem 2.5rem;
@@ -532,6 +1231,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #000000;
   height: auto;
   transition: 0.2s all;
+  font-weight: 500;
 }
 .c-linkBtn a:hover {
   background: #978F10;
@@ -540,14 +1240,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.2s all;
 }
 
-.c-sectionTitle {
-  font: normal normal medium 36px/32px "YuMincho";
+.c-sectionTitle h2 {
+  font: normal normal 500 36px/32px "YuMincho";
   text-align: center;
   margin-bottom: 60px;
 }
 .c-sectionTitle img {
   display: block;
-  margin: 0 auto 10px;
+  margin: 0 auto 13px;
 }
 
 .c-tabPanel {
@@ -565,6 +1265,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 20px;
 }
 .c-tabPanel .tab-group .is-active {
+  font-weight: 500;
   text-decoration: underline;
   transition: all 0.2s ease-out;
 }
@@ -574,8 +1275,23 @@ h1, h2, h3, h4, h5, h6 {
 .c-tabPanel .panel-group .panel {
   display: none;
 }
-.c-tabPanel .panel-group .panel > .c-card-info:nth-of-type(5), .c-tabPanel .panel-group .panel .c-card-info:nth-of-type(5) {
+.c-tabPanel .panel-group .panel > .c-card-info:nth-of-type(5), .c-tabPanel .panel-group .panel .c-card-info:nth-of-type(6) {
   margin-bottom: 0;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .c-tabPanel .panel-group .panel > .c-card-info:nth-of-type(5), .c-tabPanel .panel-group .panel .c-card-info:nth-of-type(6) {
+    margin-bottom: 20px;
+  }
 }
 .c-tabPanel .panel-group .panel.is-show {
   display: flex;
@@ -585,12 +1301,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .c-breadCrumbList {
   margin: 30px 0 90px;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .c-breadCrumbList {
+    margin-bottom: 50px;
+  }
 }
 .c-breadCrumbList ul {
   display: flex;
 }
 .c-breadCrumbList ul li a {
   color: #000;
+  font-weight: 500;
 }
 .c-breadCrumbList ul li a:hover {
   text-decoration: underline;
@@ -612,11 +1344,30 @@ h1, h2, h3, h4, h5, h6 {
   writing-mode: vertical-rl;
   color: #fff;
   z-index: 100;
-  font: normal normal 34px/42px "YuMincho";
+  font: normal normal 800 34px/42px "YuMincho";
   top: 30%;
   right: 25%;
   line-height: 2;
   letter-spacing: 1.25rem;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-mainVisual .mainTitle {
+    font: normal normal 800 28px/34px "YuMincho";
+    top: 30%;
+    right: 32%;
+    line-height: 2;
+    letter-spacing: 1rem;
+  }
 }
 
 .mainVisual-room {
@@ -628,10 +1379,25 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   top: 50%;
   transform: translateX(-50%);
-  font: normal normal 34px/42px "YuMincho";
+  font: normal normal 500 34px/42px "YuMincho";
 }
 .mainVisual-room .mainVisual-room {
   height: 500px;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 845px) {
+  .mainVisual-room .mainVisual-room {
+    height: 400px;
+  }
 }
 .mainVisual-room .mainVisual-room img {
   height: 100%;
@@ -645,6 +1411,22 @@ h1, h2, h3, h4, h5, h6 {
   height: 681px;
   writing-mode: vertical-rl;
   display: flex;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 845px) {
+  .p-mainCatch {
+    writing-mode: unset;
+    padding-bottom: 100px;
+  }
 }
 .p-mainCatch .mainCatchContainer {
   display: block;
@@ -660,15 +1442,51 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
   font-family: "YuMincho";
   letter-spacing: 0.5rem;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
 }
 .p-mainCatch .mainCatchContainer .catchTitle .brIndent {
   display: block;
   text-indent: 3rem;
 }
+@media (max-width: 845px) {
+  .p-mainCatch .mainCatchContainer .catchTitle {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  .p-mainCatch .mainCatchContainer .catchTitle .brIndent {
+    text-indent: unset;
+  }
+}
 .p-mainCatch .mainCatchContainer p {
   margin-top: 50px;
   letter-spacing: 0.25rem;
   font-family: "YuMincho";
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-mainCatch .mainCatchContainer p {
+    margin-top: 20px;
+    /* font-size: 0.9375rem; */
+    margin-left: 10px;
+  }
 }
 .p-mainCatch .mainCatchContainer .ryokanName {
   align-self: flex-end;
@@ -682,11 +1500,43 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   margin-top: 106px;
   margin-bottom: 78px;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-mainContents {
+    margin-top: unset;
+    margin-bottom: unset;
+    background-image: url(../../../img/);
+  }
 }
 
 .mainContents-room {
   width: 100%;
   margin-top: 90px;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .mainContents-room {
+    margin-top: 50px;
+  }
 }
 .mainContents-room .mainContent-roomContainer {
   width: 100%;
@@ -695,21 +1545,68 @@ h1, h2, h3, h4, h5, h6 {
   height: 2;
   text-align: center;
   margin-bottom: 130px;
+  font-weight: 500;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .mainContents-room .mainContent-roomContainer h2 {
+    font-size: 1.125rem;
+    margin-bottom: 50px;
+  }
 }
 
 .p-recommendationPlan {
   background-image: url(../../../img/bg02.png);
   background-size: cover;
   width: 100%;
-  padding: 40px 0 140px;
+  padding: 60px 0 140px;
 }
 .p-recommendationPlan .planContens {
   display: flex;
   justify-content: space-around;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-recommendationPlan .planContens {
+    flex-direction: column;
+  }
 }
 .p-recommendationPlan .planContens .planMenu {
   width: 30%;
   text-align: left;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-recommendationPlan .planContens .planMenu {
+    width: 100%;
+  }
 }
 .p-recommendationPlan .planContens .planMenu .planImg {
   overflow: hidden;
@@ -723,10 +1620,43 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
   margin-top: 28px;
   margin-bottom: 30px;
+  font-weight: 500;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-recommendationPlan .planContens .planMenu h3 {
+    margin-bottom: 20px;
+  }
 }
 .p-recommendationPlan .planContens .planMenu p {
-  width: 80%;
+  width: 90%;
   line-height: 2;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-recommendationPlan .planContens .planMenu p {
+    width: 100%;
+    line-height: 1.5;
+    margin-bottom: 50px;
+  }
 }
 .p-recommendationPlan .planContens .planMenu:hover .planImg {
   overflow: hidden;
@@ -740,6 +1670,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 60px;
   margin-bottom: 60px;
 }
+.p-info .infoContainer {
+  width: 100%;
+}
 
 .p-access {
   background-image: url(../../../img/bg-1.png);
@@ -749,23 +1682,139 @@ h1, h2, h3, h4, h5, h6 {
 .p-access .addressBlock {
   display: flex;
   justify-content: space-between;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-access .addressBlock {
+    flex-direction: column;
+  }
 }
 .p-access .addressBlock .addressImg {
   width: 50%;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-access .addressBlock .addressImg {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 .p-access .addressBlock .addressInfo {
   width: 45%;
   text-align: left;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-access .addressBlock .addressInfo {
+    width: 100%;
+  }
+}
+.p-access .addressBlock .addressInfo tr {
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-access .addressBlock .addressInfo tr {
+    display: flex;
+    margin-bottom: 10px;
+  }
 }
 .p-access .addressBlock .addressInfo th, .p-access .addressBlock .addressInfo td {
   display: block;
   line-height: 2;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-access .addressBlock .addressInfo th, .p-access .addressBlock .addressInfo td {
+    display: inline-block;
+  }
+}
+.p-access .addressBlock .addressInfo th {
+  font-weight: 800;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-access .addressBlock .addressInfo th {
+    flex: 0 0 25%;
+  }
+}
+.p-access .addressBlock .addressInfo td, .p-access .addressBlock .addressInfo span {
+  font-weight: 500;
 }
 .p-access .gmapBlock {
   margin: 70px auto 0;
   width: 60%;
   position: relative;
   overflow: hidden;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-access .gmapBlock {
+    width: 100%;
+    margin-top: 50px;
+  }
 }
 .p-access .gmapBlock::before {
   content: "";
@@ -785,19 +1834,54 @@ h1, h2, h3, h4, h5, h6 {
 
 .p-onsenExplanation {
   margin-bottom: 80px;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-onsenExplanation {
+    margin-bottom: unset;
+  }
 }
 .p-onsenExplanation .explanationContainer {
   padding: 80px 0;
   border-top: 1px solid #E7E7E7;
   border-bottom: 1px solid #E7E7E7;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-onsenExplanation .explanationContainer {
+    border-top: unset;
+    border-bottom: unset;
+  }
 }
 .p-onsenExplanation .explanationContainer h2 {
   text-align: center;
   margin-bottom: 50px;
+  font-size: 1.625rem;
+  font-weight: 500;
 }
 .p-onsenExplanation .explanationContainer .explanationContent {
   display: flex;
   flex-wrap: wrap;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .p-onsenExplanation .explanationContainer .explanationContent dl {
   width: 100%;
@@ -809,9 +1893,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 .p-onsenExplanation .explanationContainer .explanationContent dl dt {
   width: 20%;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-onsenExplanation .explanationContainer .explanationContent dl dt {
+    width: 22%;
+  }
 }
 .p-onsenExplanation .explanationContainer .explanationContent dl dd {
   flex: 1;
+  font-size: 0.9375rem;
+  font-weight: 500;
 }
 .p-onsenExplanation .explanationContainer .explanationContent dl:last-of-type {
   border-bottom: 1px solid #E7E7E7;

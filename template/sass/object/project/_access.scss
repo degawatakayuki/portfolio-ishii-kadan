@@ -1,3 +1,6 @@
+@use "../../foundation/variables" as var;
+@use "../../foundation/mixins" as min;
+
 .p-access {
     background-image: url(../../../img/bg-1.png);
     background-size: cover;
@@ -7,18 +10,54 @@
         display: flex;
         justify-content: space-between;
 
+        @include min.breakpoint(sp) {
+            flex-direction: column;
+        }
+
         .addressImg {
             width: 50%;
+
+            @include min.breakpoint(sp) {
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
 
         .addressInfo {
             width: 45%;
             text-align: left;
 
+            @include min.breakpoint(sp) {
+                width: 100%;
+            }
+
+            tr {
+                @include min.breakpoint(sp) {
+                    display: flex;
+                    margin-bottom: 10px;
+                }
+            }
+
             th, td {
                 display: block;
                 line-height: 2;
+
+                @include min.breakpoint(sp) {
+                    display: inline-block;
+                }
             }
+
+            th {
+                font-weight: 800;
+
+                @include min.breakpoint(sp) {
+                    flex: 0 0 25%;
+                }
+            }
+            td, span {
+                font-weight: 500;
+            }
+
         }
     }
 
@@ -26,7 +65,12 @@
         margin: 70px auto 0;
         width: 60%;
         position: relative;
-		 overflow: hidden;
+		overflow: hidden;
+
+        @include min.breakpoint(sp) {
+            width: 100%;
+            margin-top: 50px;
+        }
         &::before{
             content: '';
             display: block;

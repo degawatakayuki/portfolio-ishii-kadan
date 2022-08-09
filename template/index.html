@@ -25,10 +25,10 @@
     <header>
       <div class="headerBlock" id="headerBlock">
           <div class="headerLeft">
-              <a href="index.html" class="headerLogo">
+              <div class="headerLogo">
                 <img class="logo" src="img/top-header-logo.png" alt="ヘッダーロゴ">
                 <img class="logoScroll" src="img/sub-header-logo.png" alt="ヘッダーロゴ">
-              </a><!-- /.headerLogo -->
+              </div><!-- /.headerLogo -->
               <nav class="headerMenu-pc">
                   <ul>
                       <li><a href="room.html">お部屋</a></li>
@@ -39,6 +39,17 @@
           </div><!-- /.headerLeft -->
           <div class="headerRight">
             <button data-micromodal-trigger="modal-1" class="modal-open">宿泊予約</button>
+            <div class="headerMenuBlock-sp">
+              <input type="checkbox" id="navToggle">
+              <label for="navToggle" class="hamburger"><span></span></label>
+              <nav class="header-spNav spMainNav">
+                <ul class="spMainNav-list">
+                  <li class="spMainNav-item"><a href="index.html">お部屋</a></li>
+                  <li class="spMainNav-item"><a href="room.html">お料理</a></li>
+                  <li class="spMainNav-item"><a href="onsen.html">温泉</a></li>
+                </ul><!-- /.spMainNav-list -->
+              </nav><!-- /.header-spNav spMainNav -->
+            </div><!-- /.headerMenu-sp -->
           </div><!-- /.headerRight -->
       </div><!-- /.headerBlock -->
     </header>
@@ -67,15 +78,15 @@
                   <input type="text" name="name" placeholder="例：石井正梧">
                   <label for="mail">メールアドレス</label>
                   <input type="text" name="mail" placeholder="例：Example@example.com">
-                  <label for="plan">ご希望プラン（空いているプランのみ表示されます）</label>
+                  <label for="plan">ご希望プラン<br class="br-sp">（空いているプランのみ表示されます）</label>
                   <select name="plan" id="plan">
                     <option value=""> プランを選択してください。</option>
-                    <option value="plan1">①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
-                    <option value="plan2">②平日に優雅に楽しむ、特別宿泊プラン</option>
-                    <option value="plan3">③絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+                    <option value="①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン">①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+                    <option value="②平日に優雅に楽しむ、特別宿泊プラン">②平日に優雅に楽しむ、特別宿泊プラン</option>
+                    <option value="③絶景貸切露天と個室会席を満喫できるファミリープラン">③絶景貸切露天と個室会席を満喫できるファミリープラン</option>
                   </select><!-- /# -->
                   <label for="datepicker">日時選択</label>
-                  <input type="text" name="datepicker" id="js-datepicker" placeholder="日時を選択してください">
+                  <input type="date" id="js-datepicker" placeholder="日時を選択してください" name="entry.1111600641" value="">
                     <input type="submit" value="送信する" class="submitBtn">
                   </form>
                 </div>
@@ -87,44 +98,44 @@
         <section class="p-mainCatch">
             <div class="inner mainCatchContainer">
               <h2 class="catchTitle">温海温泉の<span class="brIndent">美しさに癒やされて</span></h2><!-- /.catchTitle -->
-              <p>東北の奥座敷である温海温泉郷<br>開湯は約1300年前とされ、役小角が<br>発見したと伝えられます</p>
-              <p>石井花壇は江戸より続く由緒ある旅館で<br>クラシックな作りの中に大正ロマンあふれる<br>内装を残しております</p>
-              <p>圧倒的癒やしの空間で<br>頑張る現代人に<br>頑張らない圧倒的な非日常をご提供します</p>
+              <p>東北の奥座敷である温海温泉郷<br>開湯は約1300年前とされ、<br>役小角が発見したと伝えられます</p>
+              <p>石井花壇は江戸より続く<br class="br-sp">由緒ある旅館で<br class="br-pc">クラシックな<br class="br-sp">作りの中に大正ロマンあふれる<br class="br-sp">内装を<br class="br-pc">残しております</p>
+              <p>圧倒的癒やしの空間で<br>頑張る現代人に頑張らない<br class="br-sp">圧倒的な非日常をご提供します</p>
               <p class="ryokanName">石井花壇</p><!-- /.ryokanName -->
             </div><!-- /.mainCatchContainer -->
         </section><!-- /.mainCatch -->
       </div>
       <section class="p-mainContents">
-        <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+        <!-- <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000"> -->
           <div class="c-card">
             <div class="cardImg"><img src="img/oheya-top.png" srcset="img/oheya-top@2x.png 2x" alt="お部屋について"></div><!-- /.cardImg -->
             <div class="cardContents">
               <h3 class="cardTitle">喧騒から離れた空間<br>心落ち着く至極のひととき</h3><!-- /.cardTitle -->
-              <p>まるで時が止まったかのような、圧倒的な静寂のなかで、<br>ひたすらにゆったりと…。<br>最高級の「何もしない時間」をお過ごしください。</p>
+              <p>まるで時が止まったかのような、<br class="br-sp">圧倒的な静寂のなかで、<br class="br-pc">ひたすらにゆったりと…。<br>最高級の「何もしない時間」をお過ごしください。</p>
               <div class="c-linkBtn"><a href="room.html">お部屋について</a></div>
             </div>
           </div>
-        </div>
-        <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+        <!-- </div> -->
+        <!-- <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000"> -->
           <div class="c-card reverse">
             <div class="cardImg"><img src="img/menu-top.png" srcset="img/menu-top@2x.png 2x" alt="料理について"></div><!-- /.cardImg -->
             <div class="cardContents">
               <h3 class="cardTitle">出迎えるのは<br>極上の温海料理</h3><!-- /.cardTitle -->
-              <p>最も旬の食材を愉しむ、最高の贅沢を最高級A5ランクの米沢牛と共に頂く。<br>あなたの人生史に残る「極上の感動」をお約束します。</p>
+              <p>最も旬の食材を愉しむ、<br class="br-sp">最高の贅沢を最高級A5ランクの米沢牛と共に頂く。<br>あなたの人生史に残る「極上の感動」をお約束します。</p>
               <div class="c-linkBtn"><a href="cooking.html">料理について</a></div>
             </div>
           </div>
-        </div>
-        <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+        <!-- </div> -->
+        <!-- <div data-aos="fade-le" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000"> -->
           <div class="c-card">
             <div class="cardImg"><img src="img/onsen-top.png" srcset="img/onsen-top@2x.png 2x" alt="温泉について"></div><!-- /.cardImg -->
             <div class="cardContents">
               <h3 class="cardTitle">疲れ切った身体にやすらぎを<br>温海の源泉に癒やされて</h3><!-- /.cardTitle -->
-              <p>古くは弘法大師の病をも治療したと言われる熱海の泉質。<br>現代人の疲弊しきった身体を修復する最高級の湯治場としてご活用ください。</p>
+              <p>古くは弘法大師の病をも治療したと言われる<br class="br-sp">熱海の泉質。<br class="br-pc">現代人の疲弊しきった身体を修復する最高級の湯治場としてご活用ください。</p>
               <div class="c-linkBtn"><a href="onsen.html">温泉について</a></div>
             </div><!-- /.cardContents -->
           </div><!-- /.c-card -->
-        </div>
+        <!-- </div> -->
       </section><!-- /.mainContents -->
       <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
         <section class="p-recommendationPlan">
@@ -139,7 +150,7 @@
                   <img src="img/recommended01.png" srcset="img/recommended01@2x.png 2x" alt="おすすめプラン1">
                 </div><!-- /.planImg -->
                 <h3>朝食付きプラン、日本近海で取れた<br>のどぐろを朝食として…</h3>
-                <p>朝食付きプラン、日本近海で取れたのどぐろを朝食として…</p>
+                <p>最高級と称されるのどぐろ、正式には「アカ ムツ」と呼ばれる魚、味は独特の上品な味わいで、焼いても煮ても美味</p>
               </div><!-- /.planMenu -->
               <div class="planMenu">
                 <div class="planImg">
@@ -339,6 +350,12 @@
             "name": "SEO",
             "item": "https://technical-seo.jp/category/seo/"
           },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "SEO内部対策",
+            "item": "https://technical-seo.jp/category/seo/on-page-seo/"
+          }
         ]
       }
       </script>

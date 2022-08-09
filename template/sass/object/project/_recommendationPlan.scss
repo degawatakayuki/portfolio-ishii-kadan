@@ -1,16 +1,26 @@
+@use "../../foundation/variables" as var;
+@use "../../foundation/mixins" as min;
 .p-recommendationPlan {
     background-image: url(../../../img/bg02.png);
     background-size: cover;
     width: 100%;
-    padding: 40px 0 140px;
+    padding: 60px 0 140px;
 
     .planContens {
         display: flex;
         justify-content: space-around;
 
+        @include min.breakpoint(sp) {
+            flex-direction: column;
+        }
+
         .planMenu {
             width: 30%;
             text-align: left;
+
+            @include min.breakpoint(sp) {
+                width: 100%;
+            }
  
             .planImg {
                 overflow: hidden;
@@ -27,11 +37,22 @@
                 line-height: 1.25;
                 margin-top: 28px;
                 margin-bottom: 30px;
+                font-weight: 500;
+
+                @include min.breakpoint(sp) {
+                    margin-bottom: 20px;
+                }
             }
 
             p {
-                width: 80%;
+                width: 90%;
                 line-height: 2;
+
+                @include min.breakpoint(sp) {
+                    width: 100%;
+                    line-height: 1.5;
+                    margin-bottom: 50px;
+                }
             }
 
             &:hover {
