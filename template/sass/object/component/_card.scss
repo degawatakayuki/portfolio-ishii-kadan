@@ -10,7 +10,7 @@
     @include min.breakpoint(sp) {
         flex-direction: column;
         max-height: unset;
-        background-image: url(../../../img/bg-2.png);
+        background-image: url(../img/bg-2.png);
         margin-bottom: 0;
         padding-bottom: 80px;
         /* opacity: 0.9; */
@@ -88,6 +88,10 @@
     height: 120px;
     margin-bottom: 20px;
 
+    @include min.breakpoint(tablet) {
+        width: 48%;
+    }
+
     .infoContent {
         padding: 12px 30px;
 
@@ -95,8 +99,11 @@
             font: normal normal 500 14px/32px 'YuMincho';
         }
 
-        @include min.breakpoint(sp) {
+        @include min.breakpoint(tablet) {
             padding: 5px 10px;
+        }
+
+        @include min.breakpoint(sp) {
             font-size: 0.875rem;
         }
     }
@@ -107,6 +114,9 @@
     }
 
     img {
+
+        width: 120px;
+        height: 100%;
         @include min.breakpoint(sp) {
             width: 100px;
             height: auto;
@@ -151,7 +161,7 @@
         overflow: hidden;
         @include min.breakpoint(tablet) {
             width: 50%;
-            height: 500px;
+            height: 230px;
         }
 
         @include min.breakpoint(sp) {
@@ -162,13 +172,13 @@
 
         img {
             width: 100%;
-            height: 250px;
+            height: 300px;
             transition:  1s all;
         }  
     }
 
     .roomContent {
-        background-image: url('../../../img/bg-2.png');
+        background-image: url('../img/bg-2.png');
         background-size: cover;
         width: 80%;
         padding: 55px;
@@ -182,7 +192,8 @@
         }
         @include min.breakpoint(sp) {
             width: 100%;
-            padding: 25px;
+            padding-right: 5px;
+            padding-left: 5px;
             margin-left: unset;;
         }
 
@@ -194,6 +205,7 @@
             @include min.breakpoint(tablet) {
                 font-size: 1.25rem;
                 margin-bottom: 20px;
+                width: 100%;
             }
         }
 
@@ -245,7 +257,13 @@
         }
 
         @include min.breakpoint(sp) {
-            
+            padding-right: unset;
+        }
+
+        h3 {
+            @include min.breakpoint(tablet) {
+                width: 100%;
+            }
         }
     }
 }

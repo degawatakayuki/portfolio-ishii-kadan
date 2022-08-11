@@ -11,6 +11,8 @@ body {
     p {
         font-weight: 500;
     }
+
+    /* overflow: hidden; */
 }
 
 ul {
@@ -51,7 +53,16 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .br-pc {
+
+    @include min.breakpoint(tablet) {
+        display: none;
+      }
+
     @include min.breakpoint(sp) {
       display: none;
     }
 }
+/* 
+.wrap {
+    overflow: hidden;
+} */

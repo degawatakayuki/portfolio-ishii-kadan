@@ -7,11 +7,12 @@
     width: 100%;
     margin-top: 106px;
     margin-bottom: 78px;
+    overflow: hidden;
 
     @include min.breakpoint(sp) {
         margin-top: unset;
         margin-bottom: unset;
-        background-image: url(../../../img/);
+        background-image: url(../img/bg-2.png);
     }
 }
 
@@ -20,6 +21,7 @@
 .mainContents-room {
     width: 100%;
     margin-top: 90px;
+    padding-top: 50px;
 
     @include min.breakpoint(sp) {
         margin-top: 50px;

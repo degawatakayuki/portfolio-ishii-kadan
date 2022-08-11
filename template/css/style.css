@@ -82,6 +82,7 @@ select {
 } */
 body {
   font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "MS P明朝", "MS PMincho", serif;
+  /* overflow: hidden; */
 }
 body * {
   box-sizing: border-box;
@@ -164,6 +165,21 @@ h1, h2, h3, h4, h5, h6 {
   		@content ;
   	}
   } */
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 845px) {
+  .br-pc {
+    display: none;
+  }
 }
 @media (max-width: 415px) {
   .br-pc {
@@ -171,6 +187,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* 
+.wrap {
+    overflow: hidden;
+} */
 .headerBlock {
   display: flex;
   position: fixed;
@@ -306,7 +326,7 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: baseline;
   transform: translateY(20%);
   margin-right: 5px;
-  background-image: url("../../img/calender.png");
+  background-image: url("../img/calender.png");
 }
 .headerBlock .headerRight .headerMenuBlock-sp {
   display: none;
@@ -358,14 +378,17 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   z-index: 100;
   opacity: 0.8;
+  width: 100%;
 }
 .headerBlock .headerRight .headerMenuBlock-sp #navToggle:checked ~ .spMainNav .spMainNav-item {
-  padding: 12px 4% 6px;
+  padding: 15px 4%;
   border-bottom: 1px solid #eee;
   text-align: center;
 }
 .headerBlock .headerRight .headerMenuBlock-sp #navToggle:checked ~ .spMainNav .spMainNav-item a {
   color: #000;
+  width: 100%;
+  padding: 15px 40%;
 }
 .headerBlock .headerRight .headerMenuBlock-sp .hamburger {
   display: none;
@@ -470,7 +493,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footerInfo {
   padding: 60px 0;
-  background-image: url(../../img/bg-3.png);
+  background-image: url(../img/bg-3.png);
   background-size: cover;
 }
 .footerInfo .footerNav {
@@ -646,7 +669,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .c-modal .modal-overlay .modal-container .modal-title {
-  font: normal normal 20px/27px "YuMincho";
+  font: normal normal 500 20px/27px "YuMincho";
   border-bottom: 1px solid #E7E7E7;
   margin: 25px 30px 0;
   padding-bottom: 25px;
@@ -676,6 +699,7 @@ h1, h2, h3, h4, h5, h6 {
 .c-modal .modal-overlay .modal-container .modal-content .reserve-form label {
   display: block;
   margin-bottom: 8px;
+  font-weight: 500;
 }
 .c-modal .modal-overlay .modal-container .modal-content .reserve-form input {
   width: 100%;
@@ -782,7 +806,7 @@ h1, h2, h3, h4, h5, h6 {
   .c-card {
     flex-direction: column;
     max-height: unset;
-    background-image: url(../../../img/bg-2.png);
+    background-image: url(../img/bg-2.png);
     margin-bottom: 0;
     padding-bottom: 80px;
     /* opacity: 0.9; */
@@ -905,9 +929,34 @@ h1, h2, h3, h4, h5, h6 {
   		@content ;
   	}
   } */
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 845px) {
+  .c-card-info {
+    width: 48%;
+  }
 }
 .c-card-info .infoContent {
   padding: 12px 30px;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
   /* @if $point == pc {
   	@media ( min-width: $pc-breakpoint ) {
   		@content ;
@@ -922,9 +971,13 @@ h1, h2, h3, h4, h5, h6 {
 .c-card-info .infoContent .date {
   font: normal normal 500 14px/32px "YuMincho";
 }
-@media (max-width: 415px) {
+@media (max-width: 845px) {
   .c-card-info .infoContent {
     padding: 5px 10px;
+  }
+}
+@media (max-width: 415px) {
+  .c-card-info .infoContent {
     font-size: 0.875rem;
   }
 }
@@ -935,6 +988,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .c-card-info img {
+  width: 120px;
+  height: 100%;
   /* @if $point == pc {
   	@media ( min-width: $pc-breakpoint ) {
   		@content ;
@@ -1044,7 +1099,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 845px) {
   .c-card-room .roomImg {
     width: 50%;
-    height: 500px;
+    height: 230px;
   }
 }
 @media (max-width: 415px) {
@@ -1056,11 +1111,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .c-card-room .roomImg img {
   width: 100%;
-  height: 250px;
+  height: 300px;
   transition: 1s all;
 }
 .c-card-room .roomContent {
-  background-image: url("../../../img/bg-2.png");
+  background-image: url("../img/bg-2.png");
   background-size: cover;
   width: 80%;
   padding: 55px;
@@ -1097,7 +1152,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 415px) {
   .c-card-room .roomContent {
     width: 100%;
-    padding: 25px;
+    padding-right: 5px;
+    padding-left: 5px;
     margin-left: unset;
   }
 }
@@ -1120,6 +1176,7 @@ h1, h2, h3, h4, h5, h6 {
   .c-card-room .roomContent h3 {
     font-size: 1.25rem;
     margin-bottom: 20px;
+    width: 100%;
   }
 }
 .c-card-room .roomContent p {
@@ -1204,6 +1261,29 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 25%;
   }
 }
+@media (max-width: 415px) {
+  .reverse-room .roomContent {
+    padding-right: unset;
+  }
+}
+.reverse-room .roomContent h3 {
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 845px) {
+  .reverse-room .roomContent h3 {
+    width: 100%;
+  }
+}
+
 .c-linkBtn {
   display: inline-block;
   margin-top: 40px;
@@ -1379,7 +1459,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   top: 50%;
   transform: translateX(-50%);
-  font: normal normal 500 34px/42px "YuMincho";
+  font: normal normal 800 34px/42px "YuMincho";
 }
 .mainVisual-room .mainVisual-room {
   height: 500px;
@@ -1406,7 +1486,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .p-mainCatch {
-  background-image: url(../../../img/bg.png);
+  background-image: url(../img/bg.png);
   width: 100%;
   height: 681px;
   writing-mode: vertical-rl;
@@ -1442,6 +1522,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
   font-family: "YuMincho";
   letter-spacing: 0.5rem;
+  font-weight: 500;
   /* @if $point == pc {
   	@media ( min-width: $pc-breakpoint ) {
   		@content ;
@@ -1456,6 +1537,7 @@ h1, h2, h3, h4, h5, h6 {
 .p-mainCatch .mainCatchContainer .catchTitle .brIndent {
   display: block;
   text-indent: 3rem;
+  font-weight: 500;
 }
 @media (max-width: 845px) {
   .p-mainCatch .mainCatchContainer .catchTitle {
@@ -1500,6 +1582,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   margin-top: 106px;
   margin-bottom: 78px;
+  overflow: hidden;
   /* @if $point == pc {
   	@media ( min-width: $pc-breakpoint ) {
   		@content ;
@@ -1515,13 +1598,14 @@ h1, h2, h3, h4, h5, h6 {
   .p-mainContents {
     margin-top: unset;
     margin-bottom: unset;
-    background-image: url(../../../img/);
+    background-image: url(../img/bg-2.png);
   }
 }
 
 .mainContents-room {
   width: 100%;
   margin-top: 90px;
+  padding-top: 50px;
   /* @if $point == pc {
   	@media ( min-width: $pc-breakpoint ) {
   		@content ;
@@ -1565,7 +1649,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .p-recommendationPlan {
-  background-image: url(../../../img/bg02.png);
+  background-image: url(../img/bg02.png);
   background-size: cover;
   width: 100%;
   padding: 60px 0 140px;
@@ -1675,7 +1759,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .p-access {
-  background-image: url(../../../img/bg-1.png);
+  background-image: url(../img/bg-1.png);
   background-size: cover;
   padding: 50px 0 110px;
 }
@@ -1882,6 +1966,22 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
   padding-left: 10%;
   padding-right: 10%;
+  /* @if $point == pc {
+  	@media ( min-width: $pc-breakpoint ) {
+  		@content ;
+  	}
+  }
+  @if $point == wide {
+  	@media ( min-width: $wd-breakpoint ) {
+  		@content ;
+  	}
+  } */
+}
+@media (max-width: 415px) {
+  .p-onsenExplanation .explanationContainer .explanationContent {
+    padding-left: unset;
+    padding-right: unset;
+  }
 }
 .p-onsenExplanation .explanationContainer .explanationContent dl {
   width: 100%;

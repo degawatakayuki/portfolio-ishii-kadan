@@ -44,8 +44,8 @@
               <label for="navToggle" class="hamburger"><span></span></label>
               <nav class="header-spNav spMainNav">
                 <ul class="spMainNav-list">
-                  <li class="spMainNav-item"><a href="index.html">お部屋</a></li>
-                  <li class="spMainNav-item"><a href="room.html">お料理</a></li>
+                  <li class="spMainNav-item"><a href="room.html">お部屋</a></li>
+                  <li class="spMainNav-item"><a href="cooking.html">お料理</a></li>
                   <li class="spMainNav-item"><a href="onsen.html">温泉</a></li>
                 </ul><!-- /.spMainNav-list -->
               </nav><!-- /.header-spNav spMainNav -->
@@ -100,26 +100,26 @@
         </div><!-- /.panList -->
         <section class="p-mainContents mainContents-room">
             <div class="inner mainContent-roomContainer">
-                <h2>心も身体も癒やす汐の温泉。<br>湯あたりしにくく、赤ちゃんから<br class="br-sp">年配の方までどなたでもゆっくりと<br class="br-sp">安心して入っていただけます。<br>柔らかく優しい湯にじっくりと漬かれば、<br class="br-sp">心身共にリラックスできます。</h2>
+                <h2>心も身体も癒やす汐の温泉。<br>湯あたりしにくく、赤ちゃんから<br class="br-sp">年配の方までどなたでもゆっくりと<br class="br-sp">安心して入っていただけます。<br>柔らかく優しい湯にじっくりと<br class="br-sp">漬かれば、心身共にリラックスできます。</h2>
                 <div class="contentsRoom">
-                  <!-- <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000"> -->
+                  <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
                     <div class="c-card-room">
                         <div class="roomImg"><img src="img/onsen01.png" srcset="img/onsen01@2x.png 2x" alt="温泉画像1"></div><!-- /.roomImg -->
                         <div class="roomContent">
                             <h3>貸し切り露天風呂「雲居の湯」</h3>
-                            <p>弱酸性の湯質が優しく肌を包み込むような心地よさ<br>最上階の露天風呂「雲居の湯」では、湯冷めしにくい食塩泉を<br>熱海の町並みを遠方に望みながら・・・</p>
+                            <p>弱酸性の湯質が優しく肌を包み込むような心地よさ<br>最上階の露天風呂「雲居の湯」では、湯冷めしにくい食塩泉を<br class="br-pc">熱海の町並みを遠方に望みながら・・・</p>
                         </div><!-- /.roomContent -->
                     </div><!-- /.c-card-room -->
-                  <!-- </div> -->
-                  <!-- <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000"> -->
+                  </div>
+                  <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
                     <div class="c-card-room reverse-room">
                         <div class="roomImg"><img src="img/onsen02.png" srcset="img/onsen02@2x.png 2x" alt="温泉画像2"></div><!-- /.roomImg -->
                         <div class="roomContent">
                             <h3>美肌を促す乳白色の硫黄泉を</h3>
-                            <p>まじりっけなしの白いにごり湯。鳥海山から引いた酸性の強い硫酸塩泉を、<br>たっぷりと掛け流しています。<br>四季の移り変わりを、天然温泉の湯に浸りながら味わってください。</p>
+                            <p>まじりっけなしの白いにごり湯。鳥海山から引いた酸性の強い硫酸塩泉を、<br class="br-pc">たっぷりと掛け流しています。<br>四季の移り変わりを、天然温泉の湯に浸りながら味わってください。</p>
                         </div><!-- /.roomContent -->
                     </div><!-- /.c-card-room -->
-                  <!-- </div> -->
+                  </div>
                 </div><!-- /.contentsRoom -->
             </div><!-- /.mainContent-roomContainer -->
         </section><!-- /.mainContents-room -->
@@ -179,5 +179,25 @@
     <script src="js/headerScroll.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "HOME",
+            "item": "https://taka-works.blog/portfolio/ishii-kadan/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "onsen",
+            "item": "https://taka-works.blog/portfolio/ishii-kadan/onsen.html"
+          },
+        ]
+      }
+    </script>
 </body>
 </html>

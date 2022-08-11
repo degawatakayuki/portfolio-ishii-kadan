@@ -93,7 +93,7 @@
                 vertical-align: baseline;
                 transform: translateY(20%);
                 margin-right: 5px;
-                background-image: url('../../img/calender.png');
+                background-image: url('../img/calender.png');
 
             }
         }
@@ -144,15 +144,18 @@
                     right: 0;
                     z-index: 100;
                     opacity: 0.8;
+                    width: 100%;
                     
                 }
                 .spMainNav-item {
-                    padding: 12px 4% 6px;
+                    padding: 15px 4%;
                     border-bottom: 1px solid #eee;
                     text-align: center;
                     
                     a {
                         color: #000;
+                        width: 100%;
+                        padding: 15px 40%;
                     }
                 }
             }

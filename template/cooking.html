@@ -39,6 +39,17 @@
           </div><!-- /.headerLeft -->
           <div class="headerRight">
             <button data-micromodal-trigger="modal-1" class="modal-open">宿泊予約</button>
+            <div class="headerMenuBlock-sp">
+              <input type="checkbox" id="navToggle">
+              <label for="navToggle" class="hamburger"><span></span></label>
+              <nav class="header-spNav spMainNav">
+                <ul class="spMainNav-list">
+                  <li class="spMainNav-item"><a href="room.html">お部屋</a></li>
+                  <li class="spMainNav-item"><a href="cooking.html">お料理</a></li>
+                  <li class="spMainNav-item"><a href="onsen.html">温泉</a></li>
+                </ul><!-- /.spMainNav-list -->
+              </nav><!-- /.header-spNav spMainNav -->
+            </div><!-- /.headerMenu-sp -->
           </div><!-- /.headerRight -->
       </div><!-- /.headerBlock -->
     </header>
@@ -105,7 +116,7 @@
                         <div class="roomImg"><img src="img/menu02.png" srcset="img/menu02@2x.png 2x" alt="料理画像2"></div><!-- /.roomImg -->
                         <div class="roomContent">
                             <h3>熱海の漁港で目利きの品を</h3>
-                            <p>石井花壇でお出しする料理はすべて料理長である大将の目利きで、<br>熱海の魚市場でその日のうちに仕入れたものを使用しております。<br>日本海の宝玉を十分にお楽しみください。</p>
+                            <p>石井花壇でお出しする料理はすべて料理長である大将の目利きで、<br class="br-pc">熱海の魚市場でその日のうちに仕入れたものを使用しております。<br>日本海の宝玉を十分にお楽しみください。</p>
                         </div><!-- /.roomContent -->
                     </div><!-- /.c-card-room -->
                   </div>
@@ -114,7 +125,7 @@
                         <div class="roomImg"><img src="img/menu03.png" srcset="img/menu03@2x.png 2x" alt="料理画像3"></div><!-- /.roomImg -->
                         <div class="roomContent">
                             <h3>食材が一流、職人も一流</h3>
-                            <p>石井花壇の料理人は料亭で20年経験を積んだものばかり。<br>その時の最も旬な食材を、最高の調理でお届けします。<br>また、お料理への細かいご要望にもお答えできますので、<br>お気軽にお申し付けください。</p>
+                            <p>石井花壇の料理人は料亭で20年経験を積んだものばかり。<br>その時の最も旬な食材を、最高の調理でお届けします。<br>また、お料理への細かいご要望にもお答えできますので、<br class="br-pc">お気軽にお申し付けください。</p>
                         </div><!-- /.roomContent -->
                     </div><!-- /.c-card-room -->
                   </div>
@@ -155,5 +166,25 @@
     <script src="js/headerScroll.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "HOME",
+            "item": "https://taka-works.blog/portfolio/ishii-kadan/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "cooking",
+            "item": "https://taka-works.blog/portfolio/ishii-kadan/cooking.html"
+          },
+        ]
+      }
+    </script>
 </body>
 </html>
