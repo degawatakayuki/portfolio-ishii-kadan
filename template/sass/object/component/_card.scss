@@ -10,7 +10,7 @@
     @include min.breakpoint(sp) {
         flex-direction: column;
         max-height: unset;
-        background-image: url(../img/bg-2.png);
+        background-image: url(../img/bg-2.jpg);
         margin-bottom: 0;
         padding-bottom: 80px;
         /* opacity: 0.9; */
@@ -178,7 +178,7 @@
     }
 
     .roomContent {
-        background-image: url('../img/bg-2.png');
+        background-image: url('../img/bg-2.jpg');
         background-size: cover;
         width: 80%;
         padding: 55px;
