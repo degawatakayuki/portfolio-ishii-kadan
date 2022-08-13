@@ -10,7 +10,7 @@
     @include min.breakpoint(sp) {
         flex-direction: column;
         max-height: unset;
-        background-image: url(../img/bg-2.jpg);
+        background-image: url(../img/bg-2-sp.jpg);
         margin-bottom: 0;
         padding-bottom: 80px;
         /* opacity: 0.9; */
@@ -191,6 +191,7 @@
             padding-left: 25%; 
         }
         @include min.breakpoint(sp) {
+            background-image: url('../img/bg-2-sp.jpg');
             width: 100%;
             padding-right: 5px;
             padding-left: 5px;

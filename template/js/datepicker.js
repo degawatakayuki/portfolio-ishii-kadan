@@ -1,5 +1,5 @@
 var date = new Date();
-var minDate = date.setDate(date.getDate() + 1);
+var minDate = date.setDate(date.getDate());
 var nowMonth = new Date(date.getFullYear(), date.getMonth(), );
 
 flatpickr('#js-datepicker', {

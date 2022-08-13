@@ -6,6 +6,10 @@
     width: 100%;
     padding: 60px 0 140px;
 
+    @include min.breakpoint(sp) {
+        background-image: url(../img/bg02-sp.jpg);
+    }
+
     .planContens {
         display: flex;
         justify-content: space-around;
@@ -27,6 +31,7 @@
 
                 img {
                     width: 100%;
+                    height: 100%;
                     transition: 1s all;
                 }
             }

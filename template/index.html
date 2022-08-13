@@ -17,7 +17,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/aos.css">
     <meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。 伝統的「和」の息づく空間で、至極のひとときをお過ごしください。"><!-- ***************HP説明******************* -->
-    <meta name="keywords" content=""><!-- ***************検索キーワード******************* -->
+    <meta name="keywords" content="石井花壇 | 温海温泉旅館【公式サイト】"><!-- ***************検索キーワード******************* -->
     <meta name="robots" content="noindex"/><!-- ***************完成したら削除******************* -->
 </head>
 <body>
@@ -39,8 +39,8 @@
           <div class="headerRight">
             <button data-micromodal-trigger="modal-1" class="modal-open">宿泊予約</button>
             <div class="headerMenuBlock-sp">
-              <input type="checkbox" id="navToggle">
               <label for="navToggle" class="hamburger"><span></span></label>
+              <input type="checkbox" id="navToggle" name="navToggle">
               <nav class="header-spNav spMainNav">
                 <ul class="spMainNav-list">
                   <li class="spMainNav-item"><a href="room.html">お部屋</a></li>
@@ -56,9 +56,18 @@
       <section class="p-mainVisual">
         <h1 class="mainTitle">頑張る人の<br>頑張らない時間</h1>
         <div class="c-slideBox">
-            <img class="slideItem" src="img/mainbg01.jpg" alt="メイン画像01">
-            <img class="slideItem" src="img/mainbg02.jpg" alt="メイン画像02">
-            <img class="slideItem" src="img/mainbg03.jpg" alt="メイン画像03">
+          <picture class="slideItem" >
+            <source srcset="img/mainbg01-sp.jpg" media="(max-width: 415px)">
+            <img src="img/mainbg01.jpg" alt="メイン画像01">
+          </picture>
+          <picture class="slideItem" >
+            <source srcset="img/mainbg02-sp.jpg" media="(max-width: 415px)">
+            <img src="img/mainbg02.jpg" alt="メイン画像02">
+          </picture>
+          <picture class="slideItem" >
+            <source srcset="img/mainbg03-sp.jpg" media="(max-width: 415px)">
+            <img src="img/mainbg03.jpg" alt="メイン画像03">
+          </picture>
         </div><!-- c-slideBox -->
           <!-- モーダル -->
           <div class="modal micromodal-slide c-modal" id="modal-1" aria-hidden="true">
@@ -107,7 +116,10 @@
       <section class="p-mainContents">
         <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
           <div class="c-card">
-            <div class="cardImg"><img src="img/oheya-top.jpg" alt="お部屋について"></div><!-- /.cardImg -->
+            <picture class="cardImg">
+              <source srcset="img/oheya-top-sp.jpg" media="(max-width: 415px)">
+              <img src="img/oheya-top.jpg" alt="お部屋について">
+            </picture><!-- /.cardImg -->
             <div class="cardContents">
               <h3 class="cardTitle">喧騒から離れた空間<br>心落ち着く至極のひととき</h3><!-- /.cardTitle -->
               <p>まるで時が止まったかのような、<br class="br-sp">圧倒的な静寂のなかで、<br class="br-pc">ひたすらにゆったりと…。<br>最高級の「何もしない時間」をお過ごしください。</p>
@@ -117,7 +129,10 @@
         </div>
         <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
           <div class="c-card reverse">
-            <div class="cardImg"><img src="img/menu-top.jpg" alt="料理について"></div><!-- /.cardImg -->
+            <picture class="cardImg">
+              <source srcset="img/menu-top-sp.jpg" media="(max-width: 415px)">
+              <img src="img/menu-top.jpg" alt="料理について">
+            </picture><!-- /.cardImg -->
             <div class="cardContents">
               <h3 class="cardTitle">出迎えるのは<br>極上の温海料理</h3><!-- /.cardTitle -->
               <p>最も旬の食材を愉しむ、<br class="br-sp">最高の贅沢を最高級A5ランクの米沢牛と共に頂く。<br>あなたの人生史に残る「極上の感動」をお約束します。</p>
@@ -127,7 +142,10 @@
         </div>
         <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
           <div class="c-card">
-            <div class="cardImg"><img src="img/onsen-top.jpg" alt="温泉について"></div><!-- /.cardImg -->
+            <picture class="cardImg">
+              <source srcset="img/onsen-top-sp.jpg" media="(max-width: 415px)">
+              <img src="img/onsen-top.jpg" alt="温泉について">
+            </picture><!-- /.cardImg -->
             <div class="cardContents">
               <h3 class="cardTitle">疲れ切った身体にやすらぎを<br>温海の源泉に癒やされて</h3><!-- /.cardTitle -->
               <p>古くは弘法大師の病をも治療したと言われる<br class="br-sp">熱海の泉質。<br class="br-pc">現代人の疲弊しきった身体を修復する最高級の湯治場としてご活用ください。</p>
@@ -160,7 +178,7 @@
               </div><!-- /.planMenu -->
               <div class="planMenu">
                 <div class="planImg">
-                  <img src="img/recommended03.jpg" lt="おすすめプラン3">
+                  <img src="img/recommended03.jpg" alt="おすすめプラン3">
                 </div>
                 <h3>【平日限定】贅沢美味懐石プラン。<br>海辺の四季旬彩プラン。</h3>
                 <p>熱海近海で取れた魚を鮮度そのままに舟盛りにしてご提供。生きた味をお楽しみください。</p>
@@ -276,7 +294,7 @@
               <h2>アクセス</h2>
             </div><!-- /.planTitle -->
             <div class="addressBlock">
-              <img class="addressImg" src="img/acess.jpg" alt="旅館画像">
+              <img class="addressImg" src="img/acess-sp.jpg" alt="旅館画像">
               <table class="addressInfo">
                 <tr>
                   <th>住所</th>
@@ -293,7 +311,7 @@
               </table>
             </div><!-- /.addressBlock -->
             <div class="gmapBlock">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d399277.01830481197!2d139.50439619229573!3d38.57174795361084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8c752ece99152b%3A0xc6ea0016956290d7!2z5bGx5b2i55yM6ba05bKh5biC!5e0!3m2!1sja!2sjp!4v1659256991099!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe title="Gmap-access" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54756.68941785378!2d139.74859275422412!3d38.65626367672412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8c752ece99152b%3A0xc6ea0016956290d7!2z5bGx5b2i55yM6ba05bKh5biC!5e0!3m2!1sja!2sjp!4v1660304429705!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div><!-- /.gmapBlock -->
           </div><!-- /.accessContainer -->
         </section><!-- /.p-access -->

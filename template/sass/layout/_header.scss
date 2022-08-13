@@ -77,6 +77,7 @@
             padding: 1rem 2.3125rem;
             box-sizing: border-box;
             border: none;
+            border: 1px solid var.$white;
 
             @include min.breakpoint(sp) {
                 padding: 0.5rem 1rem;

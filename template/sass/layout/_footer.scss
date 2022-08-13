@@ -7,6 +7,10 @@
     background-image: url(../img/bg-3.jpg);
     background-size: cover;
 
+    @include min.breakpoint(sp) {
+        background-image: url(../img/bg-3-sp.jpg);
+    }
+
     .footerNav {
         width: 100%;
         text-align: center;
