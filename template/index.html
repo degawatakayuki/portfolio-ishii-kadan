@@ -74,11 +74,11 @@
             <!-- 背景のオーバーレイ -->
             <div class="modal-overlay" tabindex="-1" data-micromodal-close>
             <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-              <header class="modal-header">
+              <div class="modal-header">
                 <h2 class="modal-title" id="modal-1-title">宿泊予約</h2>
                 <!-- 閉じるボタン -->
-                <button class="modal-close" aria-label="Close modal" data-micromodal-close></button>
-              </header>
+                <a class="modal-close" aria-label="Close modal" data-micromodal-close><img src="img/close.png" alt="閉じるボタン"></a>
+              </div>
               <!-- モーダルのコンテンツ -->
               <div class="modal-content" id="modal-1-content">
                 <form class="reserve-form" action="">
@@ -87,8 +87,8 @@
                   <label for="mail">メールアドレス</label>
                   <input type="text" name="mail" placeholder="例：Example@example.com">
                   <label for="plan">ご希望プラン<br class="br-sp">（空いているプランのみ表示されます）</label>
-                  <select name="plan" id="plan">
-                    <option value=""> プランを選択してください。</option>
+                  <select name="plan" id="plan" onchange="changeColor(this)">
+                    <option value="プランを選択してください"selected hidden>プランを選択してください</option>
                     <option value="①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン">①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
                     <option value="②平日に優雅に楽しむ、特別宿泊プラン">②平日に優雅に楽しむ、特別宿泊プラン</option>
                     <option value="③絶景貸切露天と個室会席を満喫できるファミリープラン">③絶景貸切露天と個室会席を満喫できるファミリープラン</option>
@@ -106,7 +106,7 @@
         <section class="p-mainCatch">
             <div class="inner mainCatchContainer">
               <h2 class="catchTitle">温海温泉の<span class="brIndent">美しさに癒やされて</span></h2><!-- /.catchTitle -->
-              <p>東北の奥座敷である温海温泉郷<br>開湯は約1300年前とされ、<br>役小角が発見したと伝えられます</p>
+              <p>東北の奥座敷である温海温泉郷<br>開湯は約<span>1300</span>年前とされ、<br>役小角が発見したと伝えられます</p>
               <p>石井花壇は江戸より続く<br class="br-sp">由緒ある旅館で<br class="br-pc">クラシックな<br class="br-sp">作りの中に大正ロマンあふれる<br class="br-sp">内装を<br class="br-pc">残しております</p>
               <p>圧倒的癒やしの空間で<br>頑張る現代人に頑張らない<br class="br-sp">圧倒的な非日常をご提供します</p>
               <p class="ryokanName">石井花壇</p><!-- /.ryokanName -->

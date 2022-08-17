@@ -53,8 +53,12 @@
 
             @include min.breakpoint(sp) {
                 margin-top: 20px;
-                /* font-size: 0.9375rem; */
                 margin-left: 10px;
+            }
+
+            span {
+                text-orientation: upright;
+                font-weight: 500;
             }
         }
 

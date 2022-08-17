@@ -227,6 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .headerBlock .headerLeft .headerLogo {
   margin-right: 5%;
+  cursor: pointer;
   /* @if $point == pc {
   	@media ( min-width: $pc-breakpoint ) {
   		@content ;
@@ -249,6 +250,9 @@ h1, h2, h3, h4, h5, h6 {
 .headerBlock .headerLeft .headerLogo .logoScroll {
   display: none;
 }
+.headerBlock .headerLeft .headerLogo:hover {
+  opacity: 0.8;
+}
 .headerBlock .headerLeft .headerMenu-pc {
   /* @if $point == pc {
   	@media ( min-width: $pc-breakpoint ) {
@@ -267,6 +271,9 @@ h1, h2, h3, h4, h5, h6 {
 .headerBlock .headerLeft .headerMenu-pc ul li a {
   padding: 0.8rem 1.25rem;
   color: #fff;
+}
+.headerBlock .headerLeft .headerMenu-pc ul li a:hover {
+  opacity: 0.8;
 }
 @media (max-width: 415px) {
   .headerBlock .headerLeft .headerMenu-pc {
@@ -300,6 +307,7 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
   border: none;
   border: 1px solid #fff;
+  cursor: pointer;
   /* @if $point == pc {
   	@media ( min-width: $pc-breakpoint ) {
   		@content ;
@@ -328,6 +336,9 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(20%);
   margin-right: 5px;
   background-image: url("../img/calender.png");
+}
+.headerBlock .headerRight button:hover {
+  opacity: 0.8;
 }
 .headerBlock .headerRight .headerMenuBlock-sp {
   display: none;
@@ -667,10 +678,12 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   position: absolute;
   background: #fff;
-  width: 450px;
+  width: 500px;
   top: 15%;
   margin: 0 auto;
   text-align: center;
+  border: 1px solid #707070;
+  padding: 20px;
   /* @if $point == pc {
   	@media ( min-width: $pc-breakpoint ) {
   		@content ;
@@ -686,6 +699,7 @@ h1, h2, h3, h4, h5, h6 {
   .c-modal .modal-overlay .modal-container {
     width: 100%;
     top: 80px;
+    padding: unset;
   }
 }
 .c-modal .modal-overlay .modal-container .modal-title {
@@ -696,20 +710,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .c-modal .modal-overlay .modal-container .modal-close {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  border: none;
-  background: none;
-}
-.c-modal .modal-overlay .modal-container .modal-close::after {
-  content: "\f00d";
-  font: var(--fa-font-solid);
-  position: absolute;
-  font-size: 1.5rem;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 22px;
+  width: 18px;
+  height: 18px;
 }
 .c-modal .modal-overlay .modal-container .modal-content .reserve-form {
   text-align: left;
@@ -721,17 +725,26 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 8px;
   font-weight: 500;
 }
-.c-modal .modal-overlay .modal-container .modal-content .reserve-form input {
+.c-modal .modal-overlay .modal-container .modal-content .reserve-form input, .c-modal .modal-overlay .modal-container .modal-content .reserve-form select {
   width: 100%;
   border: 1px solid #E7E7E7;
   margin-bottom: 15px;
+  height: 34px;
+  box-sizing: border-box;
+}
+.c-modal .modal-overlay .modal-container .modal-content .reserve-form input::placeholder, .c-modal .modal-overlay .modal-container .modal-content .reserve-form select::placeholder {
+  color: #797878;
 }
 .c-modal .modal-overlay .modal-container .modal-content .reserve-form select {
-  width: 300px;
   margin-bottom: 15px;
+  appearance: none;
+  color: #797878;
 }
 .c-modal .modal-overlay .modal-container .modal-content .reserve-form #plan {
   font: normal normal medium 14px/19px "YuMincho";
+}
+.c-modal .modal-overlay .modal-container .modal-content .reserve-form #plan option:first-child {
+  color: #bbb;
 }
 .c-modal .modal-overlay .modal-container .modal-content .reserve-form #js-datepicker {
   margin-bottom: 0;
@@ -739,9 +752,11 @@ h1, h2, h3, h4, h5, h6 {
 .c-modal .modal-overlay .modal-container .modal-content .reserve-form .submitBtn {
   display: block;
   width: 50%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  height: 42px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   margin: 64px auto 90px;
+  line-height: 1;
 }
 
 /* モーダルアニメーション */
@@ -1603,9 +1618,12 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 415px) {
   .p-mainCatch .mainCatchContainer p {
     margin-top: 20px;
-    /* font-size: 0.9375rem; */
     margin-left: 10px;
   }
+}
+.p-mainCatch .mainCatchContainer p span {
+  text-orientation: upright;
+  font-weight: 500;
 }
 .p-mainCatch .mainCatchContainer .ryokanName {
   align-self: flex-end;

@@ -22,14 +22,17 @@
             display: block;
             position: absolute;
             background: #fff;
-            width: 450px;
+            width: 500px;
             top: 15%;
             margin: 0 auto;
             text-align: center;
+            border: 1px solid #707070;
+            padding: 20px;
 
             @include min.breakpoint(sp) {
               width: 100%;
               top: 80px;
+              padding: unset;
             }
            
             .modal-title {
@@ -41,21 +44,10 @@
 
             .modal-close {
                 position: absolute;
-                top:0;
-                right: 0;
-                width: 50px;
-                height: 50px;
-                border: none;
-                background: none;
-
-                &::after {
-                    content: '\f00d';
-                    font: var(--fa-font-solid);
-                    position: absolute;
-                    font-size: 1.5rem;
-                    top: 10px;
-                    right: 10px;
-                }
+                top:20px;
+                right: 22px;
+                width: 18px;
+                height: 18px;
             }
 
             .modal-content {
@@ -64,23 +56,36 @@
                     text-align: left;
                     padding: 25px;
                     padding-bottom: 0;
+                    
 
                     label {
                         display: block;
                         margin-bottom: 8px;
                         font-weight: 500;
                     }
-                    input {
+                    input, select {
                         width: 100%;
                         border: 1px solid #E7E7E7;
                         margin-bottom: 15px;
+                        height: 34px;
+                        box-sizing: border-box;
+
+                        &::placeholder {
+                          color: #797878;
+                       }
                     }
                     select {
-                        width: 300px;
                         margin-bottom: 15px;
+                        appearance: none;
+                        color: #797878;
                     }
+                    
                     #plan {
                         font: normal normal medium 14px/19px 'YuMincho';
+
+                        option:first-child { 
+                          color: #bbb; 
+                        }
                     }
                     #js-datepicker {
                       margin-bottom: 0;
@@ -88,9 +93,11 @@
                     .submitBtn {
                         display: block;
                         width: 50%;
-                        padding-top: 10px;
-                        padding-bottom: 10px;
+                        height: 42px;
+                        padding-top: 13px;
+                        padding-bottom: 13px;
                         margin: 64px auto 90px;
+                        line-height: 1;
                     }
                 }
 

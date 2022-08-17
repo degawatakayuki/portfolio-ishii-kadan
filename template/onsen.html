@@ -64,11 +64,11 @@
             <!-- 背景のオーバーレイ -->
             <div class="modal-overlay" tabindex="-1" data-micromodal-close>
                 <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                    <header class="modal-header">
-                    <h2 class="modal-title" id="modal-1-title">宿泊予約</h2>
-                    <!-- 閉じるボタン -->
-                    <button class="modal-close" aria-label="Close modal" data-micromodal-close></button>
-                    </header>
+                    <div class="modal-header">
+                      <h2 class="modal-title" id="modal-1-title">宿泊予約</h2>
+                      <!-- 閉じるボタン -->
+                      <a class="modal-close" aria-label="Close modal" data-micromodal-close><img src="img/close.png" alt="閉じるボタン"></a>
+                    </div>
                     <!-- モーダルのコンテンツ -->
                     <div class="modal-content" id="modal-1-content">
                         <form class="reserve-form" action="">
@@ -76,12 +76,12 @@
                             <input type="text" name="name" placeholder="例：石井正梧">
                             <label for="mail">メールアドレス</label>
                             <input type="text" name="mail" placeholder="例：Example@example.com">
-                            <label for="plan">ご希望プラン（空いているプランのみ表示されます）</label>
-                            <select name="plan" id="plan">
-                            <option value=""> プランを選択してください。</option>
-                            <option value="plan1">①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
-                            <option value="plan2">②平日に優雅に楽しむ、特別宿泊プラン</option>
-                            <option value="plan3">③絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+                            <label for="plan">ご希望プラン<br class="br-sp">（空いているプランのみ表示されます）</label>
+                            <select name="plan" id="plan" onchange="changeColor(this)">
+                              <option value="プランを選択してください"selected hidden>プランを選択してください</option>
+                              <option value="plan1">①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+                              <option value="plan2">②平日に優雅に楽しむ、特別宿泊プラン</option>
+                              <option value="plan3">③絶景貸切露天と個室会席を満喫できるファミリープラン</option>
                             </select><!-- /# -->
                             <label for="datepicker">日時選択</label>
                             <input type="text" name="datepicker" id="js-datepicker" placeholder="日時を選択してください">
